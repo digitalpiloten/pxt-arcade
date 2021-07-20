@@ -1,6 +1,5 @@
 # Greeting Card
 
-
 ```ghost
 scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
@@ -266,13 +265,13 @@ Follow these quick steps and you'll have one in no time!
 
 🎨 This card centers around an artistic background 🎨
 
-🔲 From the ``||scene:Scene||`` category, grab a ``||scene:set background image to [ ]||`` block and drag it into the **on start** container in the workspace.
+► From the ``||scene:Scene||`` category, grab a ``||scene:set background image to [ ]||`` block and drag it into the **on start** container in the workspace.
 
-🔲 Get to the **My Assets** tab by clicking inside the grey background image square and toggling the switch at the top. 
+► Get to the **My Assets** tab by clicking inside the grey background image square and toggling the switch at the top. 
 
-🔲 Choose one of our pre-loaded backgrounds...or stay in **Edit** mode to create your own.
+► Choose one of our pre-loaded backgrounds...or stay in **Edit** mode to create your own.
 
-[__*(see reference...)*__](#doc:/reference/add-background-ref "Learn to add a background.")
+[__*(see reference...)*__](#doc:/reference/skills/add-background "Learn to add a background.")
 
 ```blocks
 scene.setBackgroundImage(img`
@@ -404,13 +403,13 @@ scene.setBackgroundImage(img`
 
 💛 Let's add a heartfelt greeting 💛
 
-🔲 From ``||sprites:Sprites||``, grab a ``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` block and snap it into the end of the **on start** container in the workspace.
+► From ``||sprites:Sprites||``, grab a ``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` block and snap it into the end of the **on start** container in the workspace.
 
-🔲 Get to the **My Assets** tab by clicking inside the grey sprite square and toggling the switch at the top. 
+► Get to the **My Assets** tab by clicking inside the grey sprite square and toggling the switch at the top. 
 
-🔲 Choose one of our pre-loaded titles...or stay in **Edit** mode to create your own.
+► Choose one of our pre-loaded titles...or stay in **Edit** mode to create your own.
 
-[__*(see reference...)*__](#doc:/reference/set-sprite-ref "Learn to add a sprite.")
+[__*(see reference...)*__](#doc:/reference/skils/set-sprite "Learn to add a sprite.")
 
 ```blocks
 scene.setBackgroundImage(img`
@@ -657,19 +656,17 @@ let mySprite = sprites.create(img`
     ................................................................................................................................................................
     ................................................................................................................................................................
     `, SpriteKind.Player)
-
-
 ```
 
 ## Step 3
 
 🎉 Time for a celebration 🎉
 
-🔲 Add some pizzazz from the ``||scene:Scene||`` category by grabbing a ``||scene:start screen [confetti] effect||`` block and snapping it into the **on start** container.
+► Add some pizzazz from the ``||scene:Scene||`` category by grabbing a ``||scene:start screen [confetti] effect||`` block and snapping it into the **on start** container.
 
 Look at the simulator on the left to see what you've done so far!
 
-[__*(see reference...)*__](#doc:/reference/screen-effect-ref "Learn to add scene effects.")
+[__*(see reference...)*__](#doc:/reference/skills/screen-effect "Learn to add scene effects.")
 
 ```blocks
 scene.setBackgroundImage(img`
@@ -924,11 +921,11 @@ let mySprite = sprites.create(img`
 
 🎵 Now, let's add a personal note 🎵 
 
-🔲 From the ``||music:Music||`` category, grab a ``||music:play melody [ ] at tempo [120] (bpm)||`` block and snap it into the bottom of the **on start** container.
+► From the ``||music:Music||`` category, grab a ``||music:play melody [ ] at tempo [120] (bpm)||`` block and snap it into the bottom of the **on start** container.
 
-🔲 In the new block, click on the music note to open the music editor. You can write your own song, or toggle to the **Gallery** to pick one that we've written for you.
+► In the new block, click on the music note to open the music editor. You can write your own song, or toggle to the **Gallery** to pick one that we've written for you.
 
-[__*(see reference...)*__](#doc:/reference/play-melody-ref "Learn to add a melody.")
+[__*(see reference...)*__](#doc:/reference/skills/play-melody "Learn to add a melody.")
 
 ```blocks
 scene.setBackgroundImage(img`
@@ -1184,7 +1181,6 @@ music.playMelody("G B A G C5 B A B ", 120)
 Congratulations, you've finished your greeting card!  
 
 Click "Finish" to save your card to your gallery so you can share it (or keep building.)
-
 
 
 ```assetjson

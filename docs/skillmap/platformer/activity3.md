@@ -1,4 +1,6 @@
-# Enemy Follows
+# Simple Enemies
+
+### @autoexpandOff true
 
 ```jres
 {
@@ -32,10 +34,23 @@
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
+    "level0": {
+        "id": "level0",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAxZTAwMGEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA0MDAwMDAwMDAwMDAwMDQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAzMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMTAxMDEwMDAwMDEwMDAwMDEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDEwMTAxMDEwMTAxMDEwMTAxMDEwMDAwMDAwMDAwMDEwMDAwMDAwMDAwMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyMDAwMDIwMDAwMDAwMDAwMDAwMDAwMDIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMjIwMjIwMDAwMjAwMDAwMDAwMDAwMDAwMDAwMDIwMjIyMjIyMjIwMjAwMDAwMjAwMDAyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMg==",
+        "tileset": [
+            "myTiles.transparency16",
+            "myTiles.tile1",
+            "myTiles.tile3",
+            "myTiles.tile4",
+            "myTiles.tile5"
+        ],
+        "displayName": "level0"
+    },
     "level": {
         "id": "level",
         "mimeType": "application/mkcd-tilemap",
-        "data": "MTAxZTAwMGEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA0MDAwMDAwMDAwMDAwMDQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAzMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMTAxMDEwMDAwMDEwMDAwMDUwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDEwMTAxMDEwMTAxMDEwMTAxMDEwMDAwMDAwMDAwMDUwMDAwMDAwMDAwMDUwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyMDAwMDIwMDAwMDAwMDAwMDAwMDAwMDIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMjIwMjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDIwMjIyMjIyMjIwMjAwMDAwMDAwMDAyMDIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMg==",
+        "data": "MTAxZTAwMGEwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA0MDAwMDAwMDAwMDAwMDQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAzMDAwMDAwMDEwMDAwMDAwMDAwMDAwMDAxMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMTAxMDEwMDAwMDEwNTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDEwMTAxMDEwMTAxMDEwMTAxMDEwMDAwMDAwMDAwMDUwMDAwMDAwMDAwMDUwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyMDAwMDIwMDAwMDAwMDAwMDAwMDAwMDIwMDAwMDAwMjAwMDAwMDAwMDAwMDAwMDAwMjIwMjIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDIwMjIyMjIyMjIwMjAwMDAwMDAwMDAyMDIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMg==",
         "tileset": [
             "myTiles.transparency16",
             "myTiles.tile1",
@@ -43,7 +58,8 @@
             "myTiles.tile4",
             "myTiles.tile5",
             "myTiles.tile2"
-        ]
+        ],
+        "displayName": "platformer1"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
@@ -91,13 +107,13 @@ tiles.placeOnRandomTile(mySprite, myTiles.tile3)
 info.setLife(3)
 ```
 
-## Start @unplugged
+## Start @showdialog
 
 In this lesson, we'll take what we made in previous tutorials and add simple enemies.  
 
 We'll also use a sprite overlap event to have enemies interact with the player sprite.
 
-![Editing our platformer](/static/skillmaps/platformer/platformer3.gif "Time to live dangerously!")
+![Editing our platformer](/static/skillmap/platformer/platformer3.gif "Time to live dangerously!")
 
 
 ## Spawning enemies pt. 1
@@ -106,20 +122,22 @@ We'll also use a sprite overlap event to have enemies interact with the player s
 some enemies on the tilemap.**  
 
 We'll use purple **[ ! ]** tiles as enemy spawn points.
-<hr/>
 
-🔲 Drag out a ``||loops: for element [value] of [list]||`` [__loop__](#loopd "a segment of code that runs multiple times in a row")
+---
+
+
+► Drag out a ``||loops: for element [value] of [list]||`` [__loop__](#loopd "a segment of code that runs multiple times in a row")
 and snap it into the bottom of the ``||loops: on start||`` container.
 
 The [__*list*__](#listical  "ordered group of items") we need in the header of that 👆 loop 
 is the list of saved location for each of the **[ ! ]** blocks. 
-Fourunately, we have a piece of code that tells us where those are.
+Fortunately, we have a piece of code that tells us where those are.
 
-🔲 Find the ``||scene: array of all [ ] locations||`` argument block and 
+► Find the ``||scene: array of all [ ] locations||`` argument block and 
 drag it into the header of the new loop where the **list** argument is.
 
-🔲 Click on the checkerboard and change it to the **[ ! ]** tile.
-<br/>
+► Click on the checkerboard and change it to the **[ ! ]** tile.
+  
 
 ```blocks
 let mySprite: Sprite = null
@@ -154,7 +172,7 @@ for (let value of tiles.getTilesByType(myTiles.tile5)) {
 }
 ```
 
-## A little lesson @unplugged
+## A little lesson @showdialog
 
 Now our loop will run for each tile location.  
 
@@ -165,17 +183,21 @@ location on the tilemap!
 ## Spawning enemies pt. 3
 
 👾 Time to spawn some enemies 👾 
-<hr/>
 
-🔲 Drag ``||sprites: set [mySprite2] to sprite [ ] of kind [player]||`` 
+---
+
+
+► Drag ``||variables: set [mySprite2] to sprite [ ] of kind [player]||`` 
 into the new loop.
 
-🔲 Click the **mySprite2** [__*variable*__](#varied "a label that holds the place for something that can change") 
+► Click the **mySprite2** [__*variable*__](#varied "a label that holds the place for something that can change") 
 and choose to create a **new variable** called **myEnemy**. 
 
-🔲 Click the grey sprite rectangle inside the new block to draw an image for the enemy
-(or choose one from the gallery.)
-<br/>
+► Click the grey sprite rectangle inside the new block to draw an image for the enemy
+(or choose one from the gallery.)  
+
+► Change the kind of this sprite from **Player** to **Enemy**.    
+
 
 ```blocks
 let myEnemy: Sprite = null
@@ -208,23 +230,23 @@ info.setLife(3)
 for (let value of tiles.getTilesByType(myTiles.tile5)) {
 // @highlight
     myEnemy = sprites.create(img`
-        a a a a a a a a a a a a a a a a
-        a b b b b b b b b b b b b b b a
-        a b a a a a a a a a a a a a b a
-        a b a a b b a a a a b b a a b a
-        a b a a a a b a a b a a a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a b a a a a b a a a b a
-        a b a a a b a a a a b a a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a b b b b b b a a a b a
-        a b a a b a a a a a a b a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a a a a a a a a a a b a
-        a b b b b b b b b b b b b b b a
-        a a a a a a a a a a a a a a a a
-        `, SpriteKind.Enemy)
+...........fffffff...ccfff..........
+..........fbbbbbbbffcbbbbf..........
+..........fbb111bbbbbffbf...........
+..........fb11111ffbbbbff...........
+..........f1cccc1ffbbbbbcff.........
+..........ffc1c1c1bbcbcbcccf........
+...........fcc3331bbbcbcbcccf..ccccc
+............c333c1bbbcbcbccccfcddbbc
+............c333c1bbbbbbbcccccddbcc.
+............c333c11bbbbbccccccbbcc..
+...........cc331c11bbbbccccccfbccf..
+...........cc13c11cbbbcccccbbcfccf..
+...........c111111cbbbfdddddc.fbbcf.
+............cc1111fbdbbfdddc...fbbf.
+..............cccfffbdbbfcc.....fbbf
+....................fffff........fff
+`, SpriteKind.Enemy)
 }
 ```
 
@@ -234,15 +256,17 @@ Our enemies are spawning now, but they're all hanging out in one location.
 Let's start each of them on a different **[ ! ]** tile. (Each location will be 
 stored in the **value** variable at some point as we move through
 the **for element** loop.)
-<hr/>
 
-🔲 Drag a ``||scene: place [mySprite] on top of tilemap col [0] row [0]||`` block 
+---
+
+
+► Drag a ``||scene: place [mySprite] on top of tilemap col [0] row [0]||`` block 
 to the bottom of the **for element** loop.
 
-🔲 Change the sprite variable to **myEnemy** and replace the  ``||scene: tilemap col [0] row [0]||``
+► Change the sprite variable to **myEnemy** and replace the  ``||scene: tilemap col [0] row [0]||``
 argument block with the ``||variables: value||`` argument from the header of the
 **for element** loop.
-<br/>
+  
 
 ```blocks
 let myEnemy: Sprite = null
@@ -274,23 +298,23 @@ tiles.placeOnRandomTile(mySprite, myTiles.tile3)
 info.setLife(3)
 for (let value of tiles.getTilesByType(myTiles.tile5)) {
     myEnemy = sprites.create(img`
-        a a a a a a a a a a a a a a a a
-        a b b b b b b b b b b b b b b a
-        a b a a a a a a a a a a a a b a
-        a b a a b b a a a a b b a a b a
-        a b a a a a b a a b a a a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a b a a a a b a a a b a
-        a b a a a b a a a a b a a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a b b b b b b a a a b a
-        a b a a b a a a a a a b a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a a a a a a a a a a b a
-        a b b b b b b b b b b b b b b a
-        a a a a a a a a a a a a a a a a
-        `, SpriteKind.Enemy)
+...........fffffff...ccfff..........
+..........fbbbbbbbffcbbbbf..........
+..........fbb111bbbbbffbf...........
+..........fb11111ffbbbbff...........
+..........f1cccc1ffbbbbbcff.........
+..........ffc1c1c1bbcbcbcccf........
+...........fcc3331bbbcbcbcccf..ccccc
+............c333c1bbbcbcbccccfcddbbc
+............c333c1bbbbbbbcccccddbcc.
+............c333c11bbbbbccccccbbcc..
+...........cc331c11bbbbccccccfbccf..
+...........cc13c11cbbbcccccbbcfccf..
+...........c111111cbbbfdddddc.fbbcf.
+............cc1111fbdbbfdddc...fbbf.
+..............cccfffbdbbfcc.....fbbf
+....................fffff........fff
+`, SpriteKind.Enemy)
         // @highlight
     tiles.placeOnTile(myEnemy, value)
 }
@@ -300,14 +324,14 @@ for (let value of tiles.getTilesByType(myTiles.tile5)) {
 💤 Did you notice that we have the laziest enemies ever? 💤
 
 Let's wake-up our sprites and get them following our player.
-<hr/>
-🔲 Snap a ``||sprites: set [myEnemy] follow [mySprite]||`` block 
+
+---
+
+► Snap a ``||sprites: set [myEnemy] follow [mySprite]||`` block 
 into the bottom of the **for element** loop.
 
-🔲 Change the first sprite argument to **myEnemy** and the second to **mySprite**.
-
-🔲 Press the **⊕** on the new block and change the speed to **30**.
-<br/>
+► Press the **⊕** on the new block and change the speed to **30**.
+  
 
 ```blocks
 let myEnemy: Sprite = null
@@ -339,29 +363,29 @@ tiles.placeOnRandomTile(mySprite, myTiles.tile3)
 info.setLife(3)
 for (let value of tiles.getTilesByType(myTiles.tile5)) {
     myEnemy = sprites.create(img`
-        a a a a a a a a a a a a a a a a
-        a b b b b b b b b b b b b b b a
-        a b a a a a a a a a a a a a b a
-        a b a a b b a a a a b b a a b a
-        a b a a a a b a a b a a a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a b a a a a b a a a b a
-        a b a a a b a a a a b a a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a b b b b b b a a a b a
-        a b a a b a a a a a a b a a b a
-        a b a a a a a a a a a a a a b a
-        a b a a a a a a a a a a a a b a
-        a b b b b b b b b b b b b b b a
-        a a a a a a a a a a a a a a a a
-        `, SpriteKind.Enemy)
+...........fffffff...ccfff..........
+..........fbbbbbbbffcbbbbf..........
+..........fbb111bbbbbffbf...........
+..........fb11111ffbbbbff...........
+..........f1cccc1ffbbbbbcff.........
+..........ffc1c1c1bbcbcbcccf........
+...........fcc3331bbbcbcbcccf..ccccc
+............c333c1bbbcbcbccccfcddbbc
+............c333c1bbbbbbbcccccddbcc.
+............c333c11bbbbbccccccbbcc..
+...........cc331c11bbbbccccccfbccf..
+...........cc13c11cbbbcccccbbcfccf..
+...........c111111cbbbfdddddc.fbbcf.
+............cc1111fbdbbfdddc...fbbf.
+..............cccfffbdbbfcc.....fbbf
+....................fffff........fff
+`, SpriteKind.Enemy)
     tiles.placeOnTile(myEnemy, value)
     myEnemy.follow(mySprite, 30)
 }
 ```
 
-## Damage pt. 1 @unplugged
+## Damage pt. 1 @showdialog
 
 Now the enemies should be moving toward the player.
 
@@ -369,7 +393,9 @@ What happens when the enemies reach the player? **Nothing?!?**
 Well, that's no fun.  
 Let's add some code to make this more exciting.  
 😈👿😈 &nbsp;  😱  
-<hr/>
+
+---
+
 
 **Our player and enemies might meet under a couple of different** 
 [**_conditions_**](#condy "thing we need to know before deciding what happens next"):
@@ -379,25 +405,29 @@ Let's add some code to make this more exciting.
 2. **If the player runs into an enemy, 
 the player takes damage and the enemy is destroyed**
 
-<hr/>
+
+---
+
 We'll need an **on sprite overlap** event to know if these happen!
 
 ## Damage pt. 2
 In both overlap cases, we want to destroy the enemy sprite...so 
 let's code that part first.  
 💥👿💥
-<hr/>
 
-🔲 From the ``||sprites: Sprites||`` category, drag an 
+---
+
+
+► From the ``||sprites: Sprites||`` category, drag an 
 ``||sprites: on [sprite] of kind [Player] overlaps [otherSprite] of kind [Player]||`` 
 [__*event*__](#eventTime "element that makes something happen when a certain action is performed")
  container into the workspace.
 
-🔲 Leave the first kind as **Player** and change the second kind to **Enemy**.
+► Leave the first kind as **Player** and change the second kind to **Enemy**.
 
-🔲 Snap a ``||sprites: destroy [mySprite]  ⊕||`` block into the new event container.
+► Snap a ``||sprites: destroy [mySprite]  ⊕||`` block into the new event container.
 
-🔲 Drag the ``||variables: otherSprite||`` argument from the **on sprite overlaps** 
+► Drag the ``||variables: otherSprite||`` argument from the **on sprite overlaps** 
 event to replace the ``||variables: mySprite||`` variable inside the destroy block.
 
 ```blocks
@@ -406,7 +436,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 })
 ```
 
-## Damage pt. 4 @unplugged
+## Damage pt. 4 @showdialog
 
 ❗ Here comes the exciting part ❗
 
@@ -421,14 +451,18 @@ The ``||logic:if <true> then||`` block can make that happen.
     if (true) {
     }
 ```
-<hr/>
+
+---
+
 
 
 ## Damage pt. 5
 
-🔲 Start by adding an ``||logic:if <true> then||`` container to the end
+► Start by adding an ``||logic:if <true> then||`` container to the end
 of the newest **on sprite overlaps** container. 
-<hr/>
+
+---
+
 The next part will take a little deep thinking  🤯
 
 In order to have reached the ``||logic:if <true> then||`` container, the 
@@ -439,18 +473,17 @@ from the top.
 In this case, we want to check that the bottom of the player was higher
 than the center (**y**) of the enemy. Here's how to do that:
 
-🔲 Drag out a ``||logic:0 < 0||`` logic argument block and snap it into
+► Drag out a ``||logic:0 < 0||`` logic argument block and snap it into
 ``||logic:if <true> then||`` to replace the ** `<true>` ** argument.
 
-🔲 On the left-hand side of the **<**, place a ``||sprites:[mySprite] [x]||`` block and change 
+► On the left-hand side of the **<**, place a ``||sprites:[mySprite] [x]||`` block and change 
 the **x** to **bottom**, and replace **mySprite** with the **sprite** 
 variable from the **on sprite overlaps** header.
 
-🔲 Right-click on the logic argument that you just finished to duplicate it. 
-
-🔲 Place the duplicate block to the right of the **<**. Replace **bottom** 
-with **y** and replace **sprite** with **otherSprite**.  
-<br/>
+► On the right-hand side of the **<**, place a ``||sprites:[mySprite] [x]||`` block and change 
+the **x** to **y**, and replace **mySprite** with the **otherSprite** 
+variable from the **on sprite overlaps** header.
+  
 
 
 ```blocks
@@ -463,35 +496,40 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 
 ## Damage pt. 5.5
 To add more style, let's make the player bounce after they've jumped on an enemy.
-<hr/>
 
-🔲 Snap a ``||sprites:set [mySprite] [x] to ||`` block into the empty **if/then** 
+---
+
+
+► Snap a ``||sprites:set [mySprite] [x] to ||`` block into the empty **if/then** 
 logic container and replace **mySprite** with **sprite**.
 
-🔲 Replace **x** with **vy (velocity y)** using the dropdown menu.
+► Replace **x** with **vy (velocity y)** using the dropdown menu.
 
-🔲 Change the value from **0** to **-100**.  
-<br/>
+► Change the value from **0** to **-100**.  
+  
 
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     otherSprite.destroy()
     if (sprite.bottom < otherSprite.y) {
+        //@highlight
         sprite.vy = -100
     } 
 })
 ```
 
 
-## Damage pt. 6 @unplugged
+## Damage pt. 6 @showdialog
 
 Now we've written code that checks if the player has bounced on an enemy.  
 **But what if it didn't?**
 
 We need to add an option in case the player and enemy overlapped in a 
 different way.  This catch-all condition is called an **else** clause. 
-<hr/>
+
+---
+
 
 To add an **else** clause to our **if/then** logic, simply press
 the **⊕** at the bottom-left corner of the **if/then** container and one will appear!
@@ -514,11 +552,13 @@ the **⊕** at the bottom-left corner of the **if/then** container and one will 
 Now that we have an **else** clause, we can use it
 for anything that needs to run when the player and enemy
 overlap in a non-jumping way. 
-<hr/>
 
-🔲 To remove a life from the player under that condition, 
+---
+
+
+► To remove a life from the player under that condition, 
 snap a ``||info: change life by [-1]||`` block into the empty **else** clause.  
-<br/>
+  
 
 ```ghost
         info.changeLifeBy(-1)
@@ -537,8 +577,15 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 ```
 
 ## Finish
-🔥 Fantastic 🔥
 
-The basic enemies tutorial is complete!  
+**The basic enemies tutorial is complete.**
+
 Try defeating the level as is, then open the tilemap editor 
-and see what happens if you add more spawn points.
+and see what happens if you add more spawn points!
+
+##Finale
+
+**🔥 Fantastic 🔥**
+
+Click **Finish** to return to the main page where you can share your game
+with family and friends!
