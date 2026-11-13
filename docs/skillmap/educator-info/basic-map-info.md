@@ -65,7 +65,7 @@ In this learning path, students will learn how to use background images, music, 
 |---|---|
 | ![Greeting Card thumbnail](/static/skillmap/map-info/greeting-card.png) | Design a simple greeting card to send to friends and family. |
 | Blocks used | **[On Start](/blocks/on-start)** <br/><br/> ``[scene.setBackgroundImage(img`.`)]``<br/>``[effects.confetti.startScreenEffect()]``<br/> ``[music.playMelody("", 120)]``|
-| Solution option | [Greating Card Project](https://arcade.makecode.com/14885-64298-31361-79978) |
+| Solution option | [Greeting Card Project](https://arcade.makecode.com/14885-64298-31361-79978) |
 
 #### 2. Bigger Greeting
 
@@ -73,7 +73,7 @@ In this learning path, students will learn how to use background images, music, 
 |---|---|
 | ![Bigger Greeting thumbnail](/static/skillmap/map-info/bigger-greeting.png) | This activity builds off the previous Greeting Card activity.<br/>Students will add text that is revealed with the press of a &nbsp;<br/>button. |
 | Blocks used | ``[controller.A.onEvent(ControllerButtonEvent.Pressed, function () {})]``<br/>``[game.setDialogFrame(img`.`)]``<br/>``[game.setDialogTextColor(0)]``<br/>``[game.showLongText("", DialogLayout.Bottom)]`` |
-| Solution option | [Bigger Greating Project](https://arcade.makecode.com/42444-68014-69780-79234) |
+| Solution option | [Bigger Greeting Project](https://arcade.makecode.com/42444-68014-69780-79234) |
 
 #### 3. Joking Around
 
@@ -101,7 +101,7 @@ In this path, students will use event containers, sprites, and projectiles to cr
 | Activity | Clicker Game (10 min) |
 |---|---|
 | ![Clicker Game thumbnail](/static/skillmap/map-info/clicker-game.png) | Create a game that adds points for each click. |
-| Blocks used | ``[info.startCountdown(10)]``<br/>``[info.changeScoreBy(1)]``<br/>``[info.onCountdownEnd(function () {})]``<br/>``[game.over(true)]``|
+| Blocks used | ``[info.startCountdown(10)]``<br/>``[info.changeScoreBy(1)]``<br/>``[info.onCountdownEnd(function () {})]``<br/>``[game.gameOver(true)]``|
 | Solution option | [Clicker Game Project](https://arcade.makecode.com/12273-78408-58405-09625) |
 
 #### 2. Button Clicker

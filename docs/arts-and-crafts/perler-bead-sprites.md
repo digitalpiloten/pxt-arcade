@@ -32,7 +32,7 @@ You can purchase Perler Beads online or at your local craft store.
 
 * On the keyboard, press Control-C to copy the image (Ctrl+C on Windows or Command+C on Mac).
 * NOTE – you can also open your game in the JavaScript editor and copy the img image code from there.
-* In a new browser tab, open the [MakeCode Arcade Stencilr](https://arcade-stencils.glitch.me) tool.
+* In a new browser tab, open the [MakeCode Arcade Stencilr](https://riknoll.github.io/arcade-stenciler/) tool.
 * Delete the existing image code in the window and paste the image from your game using the keys Control-V on the keyboard (Ctrl+V on Windows or Command+V on Mac).
 
 ![Paste the image](/static/arts-and-crafts/perler-bead-sprites/paste-image.gif)
@@ -285,9 +285,11 @@ game.onUpdateInterval(4000, function () {
 })
 forever(function () {
     if (info.score() >= 20) {
-        game.over(true, effects.confetti)
+        game.setGameOverEffect(true, effects.confetti)
+        game.gameOver(true)
     } else if (info.score() < 0) {
-        game.over(false, effects.melt)
+        game.setGameOverEffect(false, effects.melt)
+        game.gameOver(false)
     }
 })
 game.onUpdateInterval(10000, function () {

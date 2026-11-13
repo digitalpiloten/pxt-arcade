@@ -1,7 +1,7 @@
 # Developer Tips and Tricks
 
 If you want to customize and extend the Arcade game experience, or just code you games for better performance,
-this page directs you to several topics with helpul tips and guidance.
+this page directs you to several topics with helpful tips and guidance.
 
 ## Finding examples and documentation
 
@@ -33,9 +33,19 @@ Documentation on how to import and use images in Arcade can be found [here](/dev
 
 Documentation on how to create music and sound effects is [here](/developer/sound).
 
+### ~tip
+
+#### Asset packs
+
+You can set a project to only expose the assets it contains. Whether as an extension or shared project, this type of project is called an _asset pack_. When a project is set as an asset pack, only the assets are loaded and any code in the project is ignored.
+
+You can set a project as an asset pack for sharing by going to the **Settings** (⚙️) menu and selecting 'Project Settings'. Enable the 'Import as asset pack' setting. To provide assets in an extension, read the [Asset Packs](https://makecode.com/extensions/asset-packs) page to learn more about creating an asset pack extension.
+
+### ~
+
 ## Controller Buttons
 
-Use the [button tester](/developer/button-tester) to verify the proper button assignents on your controller.
+Use the [button tester](/developer/button-tester) to verify the proper button assignments on your controller.
 
 ## Getting Help
 

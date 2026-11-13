@@ -1,130 +1,124 @@
-# Game Jam: Traffic
-Check out the winners of the 4th Official Microsoft MakeCode Game Jam, featuring games about cars, travel, or traffic! More details can be found on the [official game jam page](https://arcade.makecode.com/gamejam).
+# Game Jam: Sports Jam!
+Check out the winners of the 12th Official Microsoft MakeCode Game Jam, featuring games with a sports theme! More details can be found on the [official game jam page](https://arcade.makecode.com/gamejam/sports).
 
 ## Games
 
 ### ~ codecard
-* name: Glitch
-* description: Polished and imaginative, Glitch is a game where you can slow down time and modify the terrain of the world itself to survive each level.
-* author: Web_Headed_Games
-* url: https://arcade.makecode.com/39697-95718-82872-45842
+* name: Super Soccer Frog
+* description: Navigate platforms and puzzles as you guide your ball to the goal in this tight platformer! Hop to it! Made by Bilangus
+* author: Bilangus
+* url: https://arcade.makecode.com/89699-84766-18852-49944
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/39697-95718-82872-45842/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Platformer, Puzzle, Sports
+* imageUrl: https://cdn.makecode.com/api/89699-84766-18852-49944/thumb
 ---
-* name: Last 30 seconds of the universe
-* description: It's (almost) the end of the world, and you are the galaxy's only hope... but are you really alone? This space shooter game may seem impossible at first, but keep playing and you might be surprised.
-* author: felixtsu
-* url: https://arcade.makecode.com/84204-53947-81636-40195
+* name: DOMAIN: BASKETBALL
+* description: Who wouldn't love to shoot hoops to escape from some sort of liminal space basketball horror prison? Okay, but what if I told you that you'd get to listen to a killer soundtrack while you do it? That's what I thought. By InvalidProject
+* author: InvalidProject
+* url: https://arcade.makecode.com/84418-55014-67976-79899
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/84204-53947-81636-40195/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Music, Horror, Sports
+* imageUrl: https://cdn.makecode.com/api/84418-55014-67976-79899/thumb
 ---
-* name: True Love Time Machine
-* description: You were the first tester for a brand new time machine--what could go wrong? Well... maybe one thing. Try and escape the early 2000s and see if you can get all the different possible endings!
-* author: Dylan James C The 1st
-* url: https://arcade.makecode.com/18329-44039-92547-78466
+* name: Floorit
+* description: Race tracks! Unlock cars! Make pit stops! And, most importantly, avoid crashing your car into a wall and turning into a giant ball of fire! By Octodemon
+* author: Octodemon
+* url: https://arcade.makecode.com/62390-38081-86902-97975
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/18329-44039-92547-78466/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Car, Race, Racing, Sports
+* imageUrl: https://cdn.makecode.com/api/62390-38081-86902-97975/thumb
 ---
-* name: Flying Through Time
-* description: Fast and fun, with an incredible soundtrack--use the experimental time wings to swap between past, present, and future as you zip through different landscapes to rescue your friends.
-* author: lucasmayhew
-* url: https://arcade.makecode.com/30418-01173-18811-61378
+* name: Hyper Speed
+* description: Make hairpin turns as you zoom around a track in this ultra precise racer! Also you get to shoot green orbs at each other! By Rune
+* author: Rune
+* url: https://arcade.makecode.com/85811-51210-23895-60311
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/30418-01173-18811-61378/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Car, Race, Racing, Multiplayer, Shooter, Sports
+* imageUrl: https://cdn.makecode.com/api/85811-51210-23895-60311/thumb
 ---
-* name: Tomb raider
-* description: Adventure through an ancient tomb in this tough-as-nails platformer. See if you can find all 13 ancient gems and the 3 exits before collapse!
-* author: Thomas_s
-* url: https://arcade.makecode.com/12051-52643-75656-27166
+* name: MakeCode Football
+* description: Choose your favorite football team and run plays to score touchdowns in this football simulation game! By Unique/Jayden
+* author: Unique/Jayden
+* url: https://arcade.makecode.com/83834-70201-48302-02884
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/12051-52643-75656-27166/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Simulation, Strategy, Sports
+* imageUrl: https://cdn.makecode.com/api/83834-70201-48302-02884/thumb
 ---
-* name: The Wanderer
-* description: Explore space and gather materials in this polished, resource-collection game as you try to fix your hyperdrive and escape the supernova!
-* author: DahbixLP
-* url: https://arcade.makecode.com/65329-73524-64041-09452
+* name: Octo Volley
+* description: A totally normal volleyball game where two disembodied tentacles compete. Be sure to check out the animations on this one! By BLADEr
+* author: BLADEr
+* url: https://arcade.makecode.com/33341-21259-95952-93029
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/65329-73524-64041-09452/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Animation, Multiplayer, Sports
+* imageUrl: https://cdn.makecode.com/api/33341-21259-95952-93029/thumb
 ---
-* name: Timed Platformer
-* description: Make sure you don't run out of time as you play through all twelve levels of this creative platformer!
-* author: fd268
-* url: https://arcade.makecode.com/18905-47762-39268-22513
+* name: Bocce
+* description: A clever take on the classic game of bocce where you play as some sort of magic seer who can predict where the ball will land! Oh, if only I possessed this power! I'd make all my bocce rivals pay! Mwahaha! By Cyrus Y.
+* author: Cyrus Y.
+* url: https://arcade.makecode.com/34779-05800-00488-58839
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/18905-47762-39268-22513/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Strategy, Sports
+* imageUrl: https://cdn.makecode.com/api/34779-05800-00488-58839/thumb
 ---
-* name: The Attack of the Serpents
-* description: Dive into the rich world of The Attack of the Serpents as you battle legions of snakes with the power of time at your hand!
-* author: UnsignedArduino
-* url: https://arcade.makecode.com/88379-32882-11701-72372
+* name: Tidal Games
+* description: A collection of minigames inspired by weight training! Get fit! Test your reflexes! Play as a giant anthropomorphic dog! By Michael Caplan and classes
+* author: Michael Caplan and classes
+* url: https://arcade.makecode.com/00688-66833-07971-30810
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/88379-32882-11701-72372/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Simulation, Minigames, Sports
+* imageUrl: https://cdn.makecode.com/api/00688-66833-07971-30810/thumb
 ---
-* name: Tau Dilation
-* description: The Titan of Time, Kronos, has escaped from Tartarus and it is up to you to defeat him on his own terms.
-* author: Delta
-* url: https://arcade.makecode.com/40197-18454-82229-31469
+* name: Zenith Smash
+* description: Choose a familiar-looking character and battle it out in this \"smashing\" forum-inspired fighting game! Make sure you check the forum for more game updates! By CopySprite
+* author: CopySprite
+* url: https://arcade.makecode.com/16663-52879-84426-53448
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/40197-18454-82229-31469/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Multiplayer, Fighting, Sports
+* imageUrl: https://cdn.makecode.com/api/16663-52879-84426-53448/thumb
 ---
-* name: Time Man
-* description: A complex, ambitious puzzle-platformer where you can freeze time to stop flying boulders. Be careful of quicksand and slime!
-* author: Rishi
-* url: https://arcade.makecode.com/35092-38497-85434-62286
+* name: Tag!
+* description: A good ol' fashioned game of 3 person tag! Just like the real thing, except you play in a huge arena and there is way more platforming and underground tunnels than I remember! By BitBot
+* author: BitBot
+* url: https://arcade.makecode.com/13162-16664-28217-30568
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/35092-38497-85434-62286/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Multiplayer, Platformer, Sports
+* imageUrl: https://cdn.makecode.com/api/13162-16664-28217-30568/thumb
 ---
-* name: Time Quest
-* description: Travel through time to take photos, collect items, and meet friendly and not-so-friendly locals in this beautiful dungeon crawler.
-* author: Rocket Scion
-* url: https://arcade.makecode.com/24218-66945-78169-98108
+* name: Fistful of Aces
+* description: Punch, kick, and uppercut your way to victory in this retro fighting game! Be sure to check out the other games in the Aces franchise on the forum! By Solek (Luke)
+* author: Solek (Luke)
+* url: https://arcade.makecode.com/04809-31955-37770-29859
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/24218-66945-78169-98108/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Fighting, Sports
+* imageUrl: https://cdn.makecode.com/api/04809-31955-37770-29859/thumb
 ---
-* name: Time Flies (Different Take)
-* description: A creative twist on 'Time Flies' with a lot of depth! Catch time and lives as you try to beat your high score.
-* author: BlockyChamp
-* url: https://arcade.makecode.com/56203-12068-28996-67940
+* name: Throttlemonger
+* description: You think you've got a lead foot? Can you turn on a dime? How about a nickel? Put your driving skills to the test in this multiplayer top-down racing game! By RizeUpDev
+* author: RizeUpDev
+* url: https://arcade.makecode.com/00086-31094-64609-84672
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/56203-12068-28996-67940/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Car, Race, Racing, Multiplayer, Sports
+* imageUrl: https://cdn.makecode.com/api/00086-31094-64609-84672/thumb
 ---
-* name: Timing and Patience
-* description: A simple, addicitive game where you must use timing and patience to try and nab the high score. Try out the different difficulty levels!
-* author: EgeoTube Gamez
-* url: https://arcade.makecode.com/28170-65925-97085-38467
+* name: Saw Core Training
+* description: You play as a disgraced soccer player who has been sentenced to scoring 100 goals before you can return to your team. It won't be that easy though, as you'll have to overcome all the real challenges that professional soccer players face like teleporters and tar pits! By Christian G.
+* author: Christian G.
+* url: https://arcade.makecode.com/42066-97040-21655-97461
 * cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/28170-65925-97085-38467/thumb
----
-* name: Time Over
-* description: A beautiful game with a great premise! Collect all the numbers for your clock before time runs out!
-* author: Daniela
-* url: https://arcade.makecode.com/09641-64692-55182-88904
-* cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/09641-64692-55182-88904/thumb
----
-* name: fast restaurant
-* description: Deliver the right dishes to the customer as soon as possible in this creative, challenging game.
-* author: demoCrash
-* url: https://arcade.makecode.com/61260-89058-32987-83888
-* cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/61260-89058-32987-83888/thumb
----
-* name: 4-in-1 time-related 8-bit fun
-* description: Four fun, unique games for the price of one! Make sure you play through each of these time-related minigames.
-* author: Samuel G
-* url: https://arcade.makecode.com/19854-09262-25388-69397
-* cardType: sharedExample
-* imageUrl: https://pxt.azureedge.net/api/19854-09262-25388-69397/thumb
+* searchTerms: Game Jam, Community Games, User Input, Controller, Sprites, Movement, Sports
+* imageUrl: https://cdn.makecode.com/api/42066-97040-21655-97461/thumb
 ---
 * name: See more...
 * description: Check out all the entries on the official game jam page!
 * cardType: link
+* searchTerms: Game Jam, Community Games, Sports
 * directOpen: true
-* imageUrl: /static/gamejam/jams/time/assets/preview.png
-* url: https://arcade.makecode.com/gamejam/time
+* url: https://arcade.makecode.com/gamejam/sports
+* imageUrl: /static/gamejam/jams/sports/assets/sports-jam-logo.png
+
 
 ### ~
 
 ## See Also
 
-[Game Jam Page](https://arcade.makecode.com/gamejam/time)
+[Game Jam Page](https://arcade.makecode.com/gamejam/sports)

@@ -153,7 +153,7 @@ namespace corgio {
     export let _corgi_right: Image[] = reflect(_corgi_left);
 
     /**
-     * Creates a new dart from an image and kind
+     * Creates a new corgi from an image and kind
      * @param kind the kind to make the corgi
      * @param x optional initial x position, eg: 10
      * @param y optional initial y position, eg: 70
@@ -164,6 +164,7 @@ namespace corgio {
     //% blockSetVariable=myCorg
     //% weight=100
     //% group="Create"
+    //% help=corgio/create
     export function create(kind: number,
                             x: number = 10,
                             y: number = 70): Corgio {
@@ -196,8 +197,7 @@ namespace corgio {
  * A Corgi Platformer
  **/
 //% blockNamespace=corgio color="#d2b48c" blockGap=8
-class Corgio {
-    private player: Sprite;
+class Corgio extends sprites.ExtendableSprite {
     private stillAnimation: Image[];
     private _leftAnimation: Image[];
     private _rightAnimation: Image[];
@@ -227,6 +227,7 @@ class Corgio {
     private script: string[];
 
     public constructor(kind: number, x: number, y: number) {
+        super(corgio._corgi_still[0], kind);
         this.maxMoveVelocity = 70;
         this.gravity = 300;
         this.jumpVelocity = 125;
@@ -247,11 +248,10 @@ class Corgio {
         this._leftAnimation = corgio._corgi_left;
         this._rightAnimation = corgio._corgi_right;
 
-        this.player = sprites.create(this.stillAnimation[0], kind);
-        this.player.setFlag(SpriteFlag.StayInScreen, true);
-        this.player.ay = this.gravity;
-        this.player.x = x;
-        this.player.y = y;
+        this.setFlag(SpriteFlag.StayInScreen, true);
+        this.ay = this.gravity;
+        this.x = x;
+        this.y = y;
     }
 
     /**
@@ -260,8 +260,9 @@ class Corgio {
     //% group="Properties"
     //% blockId=corgSprite block="%corgio(myCorg) sprite"
     //% weight=8
+    //% deprecated=true
     get sprite(): Sprite {
-        return this.player;
+        return this;
     }
 
     /**
@@ -270,18 +271,17 @@ class Corgio {
     //% group="Movement"
     //% blockId=horizontalMovement block="make %corgio(myCorg) move left and right with arrow keys || %on=toggleOnOff"
     //% weight=100 blockGap=5
+    //% help=corgio/horizontal-movement
     horizontalMovement(on: boolean = true): void {
-        let _this = this;
-
         this.updateFlags(on, corgio.CorgiFlags.HorizontalMovement);
 
-        game.onUpdate(function () {
-            if (!(_this.controlFlags & corgio.CorgiFlags.HorizontalMovement)) return;
+        game.onUpdate(() => {
+            if (!(this.controlFlags & corgio.CorgiFlags.HorizontalMovement)) return;
 
             let dir: number = controller.dx();
 
-            _this.player.vx = dir ? corgio.normalize(dir) * _this.maxMoveVelocity :
-                                    corgio.roundTowardsZero(_this.player.vx * _this.decelerationRate);
+            this.vx = dir ? corgio.normalize(dir) * this.maxMoveVelocity :
+                                    corgio.roundTowardsZero(this.vx * this.decelerationRate);
         })
     }
 
@@ -291,39 +291,38 @@ class Corgio {
     //% group="Movement"
     //% blockId=verticalMovement block="make %corgio(myCorg) jump if up arrow key is pressed || %on=toggleOnOff"
     //% weight=100 blockGap=5
+    //% help=corgio/vertical-movement
     verticalMovement(on: boolean = true): void {
-        let _this = this;
-
         this.updateFlags(on, corgio.CorgiFlags.VerticalMovement);
 
-        controller.up.onEvent(ControllerButtonEvent.Released, function () {
-            _this.releasedJump = true;
+        controller.up.onEvent(ControllerButtonEvent.Released, () => {
+            this.releasedJump = true;
         })
 
-        game.onUpdate(function () {
-            if (!(_this.controlFlags & corgio.CorgiFlags.VerticalMovement)) return;
+        game.onUpdate(() => {
+            if (!(this.controlFlags & corgio.CorgiFlags.VerticalMovement)) return;
 
             if (controller.up.isPressed()) {
-                if (_this.contactLeft() && controller.right.isPressed()
-                        || _this.contactRight() && controller.left.isPressed()) {
-                    _this.remainingJump = Math.max(_this.remainingJump + 1, _this.maxJump);
+                if (this.contactLeft() && controller.right.isPressed()
+                        || this.contactRight() && controller.left.isPressed()) {
+                    this.remainingJump = Math.max(this.remainingJump + 1, this.maxJump);
                 }
-                _this.jumpImpulse();
+                this.jumpImpulse();
             }
 
-            if ((_this.contactLeft() && controller.left.isPressed()
-                    || _this.contactRight() && controller.right.isPressed())
-                    && _this.player.vy > - 10) {
-                _this.player.ay = _this.gravity >> 2;
+            if ((this.contactLeft() && controller.left.isPressed()
+                    || this.contactRight() && controller.right.isPressed())
+                    && this.vy > - 10) {
+                this.ay = this.gravity >> 2;
             } else {
-                _this.player.ay = _this.gravity;
+                this.ay = this.gravity;
             }
 
-            if (_this.contactBelow()) {
-                if (_this.initJump) {
-                    _this.remainingJump = _this.maxJump;
+            if (this.contactBelow()) {
+                if (this.initJump) {
+                    this.remainingJump = this.maxJump;
                 }
-                _this.initJump = true;
+                this.initJump = true;
             }
         })
     }
@@ -334,40 +333,37 @@ class Corgio {
     //% group="Movement"
     //% blockId=followCorgi block="make camera follow %corgio(myCorg) left and right || %on=toggleOnOff"
     //% weight=90 blockGap=5
-    follow(on: boolean = true): void {
-        let _this = this;
-
+    //% help=corgio/camera-follow
+    cameraFollow(on: boolean = true): void {
         this.updateFlags(on, corgio.CorgiFlags.CameraFollow);
 
-        game.onUpdate(function () {
-            if (_this.controlFlags & corgio.CorgiFlags.CameraFollow) {
-                scene.centerCameraAt(_this.player.x, screen.height >> 1);
+        game.onUpdate(() => {
+            if (this.controlFlags & corgio.CorgiFlags.CameraFollow) {
+                scene.centerCameraAt(this.x, screen.height >> 1);
             }
         })
     }
 
     /**
-     * Make the character change sprites when moving.
+     * Make the character change sprite images when moving.
      */
     //% group="Movement"
     //% blockId=updateSprite block="change image when %corgio(myCorg) is moving || %on=toggleOnOff"
     //% weight=100 blockGap=5
+    //% help=corgio/update-sprite
     updateSprite(on: boolean = true): void {
-        let _this = this;
-
         this.updateFlags(on, corgio.CorgiFlags.UpdateSprite);
+        game.onUpdate(() => {
+            if (!(this.controlFlags & corgio.CorgiFlags.UpdateSprite)) return;
 
-        game.onUpdate(function () {
-            if (!(_this.controlFlags & corgio.CorgiFlags.UpdateSprite)) return;
+            this.count++;
 
-            _this.count++;
-
-            if (_this.player.vx == 0) {
-                _this.player.setImage(_this.pickNext(_this.stillAnimation, 6));
-            } else if (_this.player.vx < 0) {
-                _this.player.setImage(_this.pickNext(_this._leftAnimation));
+            if (this.vx == 0) {
+                this.setImage(this.pickNext(this.stillAnimation, 6));
+            } else if (this.vx < 0) {
+                this.setImage(this.pickNext(this._leftAnimation));
             } else {
-                _this.player.setImage(_this.pickNext(_this._rightAnimation));
+                this.setImage(this.pickNext(this._rightAnimation));
             }
         })
     }
@@ -379,6 +375,7 @@ class Corgio {
     //% group="Speak"
     //% blockId=addScript block="teach %corgio(myCorg) the word %input"
     //% weight=95 blockGap=5
+    //% help=corgio/add-to-script
     addToScript(input: string): void {
         this.script.push(input);
     }
@@ -389,19 +386,23 @@ class Corgio {
     //% group="Speak"
     //% blockId=bark block="make %corgio(myCorg) bark!"
     //% weight=95 blockGap=5
+    //% help=corgio/bark
     bark(): void {
-        this.player.say(Math.pickRandom(this.script), 250);
+        this.say(Math.pickRandom(this.script), 250);
     }
 
     private jumpImpulse() {
         if (this.remainingJump > 0 && this.releasedJump) {
             this.releasedJump = false;
             if (this.initJump) {
-                this.player.vy = -1 * this.jumpVelocity;
+                this.vy = -1 * this.jumpVelocity;
                 this.initJump = false;
             } else {
-                this.player.vy = Math.clamp((-4 * this.jumpVelocity) / 3, -30,
-                                            this.player.vy - this.jumpVelocity);
+                this.vy = Math.clamp(
+                    (-4 * this.jumpVelocity) / 3,
+                    -30,
+                    this.vy - this.jumpVelocity
+                );
             }
             this.remainingJump--;
         }
@@ -418,19 +419,19 @@ class Corgio {
 
     private contactLeft(): boolean {
         let screenEdge = game.currentScene().camera.offsetX;
-        return this.player.left - screenEdge <= this.touching
-                || this.player.isHittingTile(CollisionDirection.Left);
+        return this.left - screenEdge <= this.touching
+                || this.isHittingTile(CollisionDirection.Left);
     }
 
     private contactRight(): boolean {
         let screenEdge = screen.width + game.currentScene().camera.offsetX;
-        return screenEdge - this.player.right <= this.touching
-                || this.player.isHittingTile(CollisionDirection.Right);
+        return screenEdge - this.right <= this.touching
+                || this.isHittingTile(CollisionDirection.Right);
     }
 
     private contactBelow(): boolean {
         let screenEdge = screen.height + game.currentScene().camera.offsetY;
-        return screenEdge - this.player.bottom <= this.touching
-                || this.player.isHittingTile(CollisionDirection.Bottom);
+        return screenEdge - this.bottom <= this.touching
+                || this.isHittingTile(CollisionDirection.Bottom);
     }
 }

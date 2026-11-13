@@ -11,7 +11,7 @@ In this activity, you'll create code to help the shark earn points for each fish
 
 ## step 2
 
-**🕹️ See what you have 🕹️**  
+**🕹️ See what you have 🕹️**
 
 ---
 
@@ -21,7 +21,7 @@ Play with your project to remember which piece of code creates which actions in 
 
 ## step 3
 
-**🍜 Time to eat 🍜**  
+**🍜 Time to eat 🍜**
 
 We need a container that will run when the shark overlaps a fish.
 
@@ -34,20 +34,20 @@ We need a container that will run when the shark overlaps a fish.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
- 
+
 })
 ```
 
 ## Step 4
 
-**🦈 YUMMMMMM 🦈**  
+**🦈 YUMMMMMM 🦈**
 When the shark catches the fish, we need to make the fish disappear.
 
 ---
 
 ► Open ``||sprites:Sprites||``, then snap ``||sprites:destroy [mySprite]||`` into the empty **on overlaps** container.
 
-► Drag the ``||variables:otherSprite||`` value from the title of the **on overlaps** container down to replace ``||variables:mySprite||``.
+► Drag the ``||variables(noclick):otherSprite||`` value from the title of the **on overlaps** container down to replace ``||variables(noclick):mySprite||``.
 
 ![Grabbing variable from block](/static/skillmap/space/give-var.gif "So that's how you do that!")
 
@@ -61,7 +61,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 
 ► Click the plus (+) sign to the right of the ``||sprites:destroy [otherSprite]||`` block and choose an effect to play while the fish vanishes!
 
-► Change the effect duration from **500** ms to something shorter, like **100** ms. 
+► Change the effect duration from **500** ms to something shorter, like **100** ms.
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
@@ -74,11 +74,11 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 ## Step 6
 
 
-**🎉 SCORE 🎉**  
+**🎉 SCORE 🎉**
 
 ---
 
-► Add a point to the player's score by dragging ``||info:change score by [1]||``  to the bottom of the **on overlaps** container. 
+► Add a point to the player's score by dragging ``||info:change score by [1]||``  to the bottom of the **on overlaps** container.
 
 
 
@@ -93,14 +93,14 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
 ## Step 7
 
 
-**⌛ It's about time ⌛**   
+**⌛ It's about time ⌛**
 For an added challenge, let's go back to the ``||loops:on start||`` container that's already in our workspace to set a timer that ends the game when it runs out!
 
 ---
 
-► From ``||info:Info||``, snap  ``||info:start countdown [10] (s)||`` into **the end** of the ``||loops:on start||`` container. 
+► From ``||info:Info||``, snap  ``||info:start countdown [10] (s)||`` into **the end** of the ``||loops:on start||`` container.
 
-► To give the player more time, change **10** seconds to **15** seconds. 
+► To give the player more time, change **10** seconds to **15** seconds.
 
 ```blocks
 let mySprite: Sprite = null
@@ -117,20 +117,20 @@ mySprite.setStayInScreen(true)
 ## Step 8
 
 
-**🐟 Winner, winner...fish for dinner**   
+**🐟 Winner, winner...fish for dinner**
 Right now, when the timer runs out, the player loses.  Let's change that.
 
 ---
 
-► From ``||info:Info||``, grab an ``||info:on countdown end||`` container and drag it into an empty area of the workspace. 
+► From ``||info:Info||``, grab an ``||info:on countdown end||`` container and drag it into an empty area of the workspace.
 
 ► Open the ``||game:Game||`` category and drag ``||game:game over <LOSE>||`` into the empty ``||info:on countdown end||`` container.
 
-► Toggle **`<LOSE>`** to **`<WIN>`** so the player can celebrate the points they've gathered along the way. 
+► Toggle **`<LOSE>`** to **`<WIN>`** so the player can celebrate the points they've gathered along the way.
 
 ```blocks
 info.onCountdownEnd(function () {
-    game.over(true)
+    game.gameOver(true)
 })
 ```
 
@@ -138,11 +138,11 @@ info.onCountdownEnd(function () {
 
 ## Finale
 
-**🎮 How many fish you can catch in 15 seconds? 🎮**  
+**🎮 How many fish you can catch in 15 seconds? 🎮**
 
 ---
 
-When you're done playing your game, click **Finish** to head back out to the skillmap for more adventures! 
+When you're done playing your game, click **Done** to head back out to the skillmap for more adventures!
 
 
 
@@ -171,7 +171,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSpr
     info.changeScoreBy(1)
 })
 info.onCountdownEnd(function () {
-    game.over(true)
+    game.gameOver(true)
 })
 ```
 

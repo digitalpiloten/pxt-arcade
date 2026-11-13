@@ -6,15 +6,15 @@ Try this tutorial!
 
 ### ~
 
-## Introduction @unplugged
+## {Introduction @unplugged}
 
 Welcome to @boardname@! Let's get started by creating a game where your player tries to get out of a maze while there's still time!
 
 ![Maze game playing](/static/tutorials/maze/maze-game.gif)
 
-## Step 1
+## {Step 1}
 
-The first thing we'll do is make our player. Find the ``||variables:set mySprite to||`` in ``||sprites:Sprites||``. Drag it into the ``||loops:on start||``.
+The first thing we'll do is make our player. Find the ``||variables(sprites):set mySprite to||`` in ``||sprites:Sprites||``. Drag it into the ``||loops:on start||``.
 
 ```blocks
 let mySprite: Sprite = sprites.create(img`
@@ -37,9 +37,9 @@ let mySprite: Sprite = sprites.create(img`
 `, SpriteKind.Player)
 ```
 
-## Step 2 @fullscreen
+## {Step 2 @fullscreen}
 
-Click on the grey box in ``||variables:set mySprite to||`` and draw your player's image. It can be anything, solid block or a figure.
+Click on the grey box in ``||variables(sprites):set mySprite to||`` and draw your player's image. It can be anything, solid block or a figure.
 
 ![Draw a figure for the sprite](/static/tutorials/maze/draw-sprite-figure.gif)
 
@@ -64,9 +64,9 @@ let mySprite: Sprite = sprites.create(img`
 `, SpriteKind.Player)
 ```
 
-## Step 3
+## {Step 3}
 
-Now, let's make our sprite figure move with the controller arrow keys. Get a ``||controller:move mySprite with buttons||`` from ``||controller:Controller||`` and put it under ``||variables:set mySprite to||``.
+Now, let's make our sprite figure move with the controller arrow keys. Get a ``||controller:move mySprite with buttons||`` from ``||controller:Controller||`` and put it under ``||variables(sprites):set mySprite to||``.
 
 ```blocks
 let mySprite: Sprite = sprites.create(img`
@@ -90,7 +90,7 @@ let mySprite: Sprite = sprites.create(img`
 controller.moveSprite(mySprite, 100, 100)
 ```
 
-## Step 4
+## {Step 4}
 
 Next, create a tilemap that will serve as your maze. Pull ``||scene:set tilemap to||`` from ``||scene:Scene||`` into ``||loops:on start||``.
 Click on the gray box to open a tilemap, select tiles, and use the tools to draw your own maze.
@@ -122,7 +122,7 @@ controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level_0`)
 ```
 
-## Step 5
+## {Step 5}
 
 Fill in the two empty spaces in the tilemap that you left in the previous step with two new tiles:
 one that looks like something you can escape with (for example, a door or stairs),
@@ -152,7 +152,7 @@ controller.moveSprite(mySprite, 100, 100)
 tiles.setTilemap(tilemap`level_1`)
 ```
 
-## Step 6
+## {Step 6}
 
 Find ``||scene:place mySprite on top of random||`` in ``||scene:Scene||``,
 and drag it into the ``||loops:on start||`` after ``||scene:set tilemap to||``.
@@ -183,7 +183,7 @@ tiles.setTilemap(tilemap`level_1`)
 tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLadder)
 ```
 
-## Step 7
+## {Step 7}
 
 The player is now off the screen, which makes the game a bit too hard;
 find ``||scene:camera follow sprite mySprite||`` in ``||scene:Scene||``,
@@ -215,7 +215,7 @@ tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLadder)
 scene.cameraFollowSprite(mySprite)
 ```
 
-## Step 8
+## {Step 8}
 
 Find ``||scene:on sprite of kind player overlaps at location||`` in ``||scene:Scene||``.
 This event will occur whenever the player is on top of a tile of the given type;
@@ -249,7 +249,7 @@ tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLadder)
 scene.cameraFollowSprite(mySprite)
 ```
 
-## Step 9
+## {Step 9}
 
 Find ``||game:game over lose||`` in ``||game:Game||``, and drag it into the ``||scene:on sprite of kind player overlaps at location||``.
 Click ``LOSE`` to change it to ``WIN``.
@@ -257,7 +257,7 @@ This will make it so the player wins when they touch the exit.
 
 ```blocks
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairWest, function (sprite, location) {
-    game.over(true)
+    game.gameOver(true)
 })
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . .
@@ -283,13 +283,13 @@ tiles.placeOnRandomTile(mySprite, sprites.dungeon.stairLadder)
 scene.cameraFollowSprite(mySprite)
 ```
 
-## Step 10
+## {Step 10}
 
 Find ``||info:start countdown 10 (s)||`` in ``||info:Info||``, and drag it into the ``||loops:on start||``.
 
 ```blocks
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairWest, function (sprite, location) {
-    game.over(true)
+    game.gameOver(true)
 })
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . .
@@ -316,7 +316,7 @@ scene.cameraFollowSprite(mySprite)
 info.startCountdown(10)
 ```
 
-## Step 11 @unplugged
+## {Step 11 @unplugged}
 
 Now you have a game with a target, and a time crunch... but the player can move through all the walls!
 Reopen the tilemap editor,
@@ -325,7 +325,7 @@ so they can't move through them.
 
 ```blocks
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.stairWest, function (sprite, location) {
-    game.over(true)
+    game.gameOver(true)
 })
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . .
@@ -352,7 +352,7 @@ scene.cameraFollowSprite(mySprite)
 info.startCountdown(10)
 ```
 
-## Complete
+## {Complete}
 
 Congratulations, your maze game is complete! You can now play your first game. See if you can escape the maze.
 

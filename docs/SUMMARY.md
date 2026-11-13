@@ -48,10 +48,13 @@
     * [Support](/support)
     * [Translate](/translate)
     * [Sharing projects](/share)
+    * [Multiplayer](/multiplayer)
     * [Offline support](/offline)
     * [Save](/save)
     * [Sign In](/identity/sign-in)
     * [Cloud Sync](/identity/cloud-sync)
+    * [VS Code](/vscode)
+    * [Asset packs](/asset-packs)
 
 ## Hardware
 
@@ -60,5 +63,15 @@
     * [Adding New Board](/hardware/adding)
     * [Raspberry Pi](/hardware/raspberry-pi)
     * [Makey Makey](/hardware/makey-makey)
+    * [Shoebox Controller](/hardware/shoebox-controller)
     * [Dev](/hardware/dev)
     * [Debug connector](/hardware/dbg)
+
+## Developers #devs
+
+* Developers
+    * [Command Line Interface](/cli)
+    * [Visual Studio Code support](/code)
+    * [Blocks Embed](/blocks-embed)
+    * [Art, images, colors](/developer/images)
+    * [Sounds](/developer/sound)

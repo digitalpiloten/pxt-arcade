@@ -3,7 +3,7 @@
 
 ## Welcome @showdialog
 
-**🏃🏽‍♀️ Let's get moving 🏃🏽‍♂️**  
+**🏃🏽‍♀️ Let's get moving 🏃🏽‍♂️**
 
 Now that we've added an animation for our explosives, let's animate our character to make our game feel even more exciting.
 
@@ -11,42 +11,48 @@ Now that we've added an animation for our explosives, let's animate our characte
 
 
 
-## Step 2 - Try It!
+## 2. Try It!
 
-**🕹️ Start by playing your game in the game window 🕹️**
+**🕹️ Start by playing your game in the game window**
 
 ---
 
 Can you connect each chunk of code to the actions it creates?
 
 
-## Step 3 - Step to the Right
+## 3. Step to the Right
 
-**➡️ Walking to the Right ➡️**  
+**➡️ Walking to the Right** <br/>
 Let's make our character walk to the right when the right arrow is pressed.
 
 ---
 
-► To add code that runs when the player moves to the right, open ``||controller:Controller||`` and drag ``||controller:on [A] button [pressed]||`` into an empty area of the workspace. 
+- :game: To add code that runs when the player moves to the right, drag <br/>
+``||controller:on [A] button [pressed]||`` <br/>
+into an empty area of the workspace.
 
-► Click ``||controller:A||`` and choose ``||controller:right||`` from the dropdown.
+- :mouse pointer: Click ``||controller:A||`` and choose ``||controller:right||`` from the dropdown.
 
 
 ```blocks
 controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
-    
+
 })
 ```
 
-## Step 4 - Right Animation
+## 4. Right Animation
 
-► Click the **Advanced** category in the toolbar to reveal the ``||animation:Animation||`` category.
+- :chevron down: Click the **Advanced** category in the toolbar to reveal the ``||animation:Animation||`` category.
 
-► Drag the large ``||animation:animate [mySprite]||`` into the empty ``||controller:on [right] button [pressed]||`` container. 
+- :sync: Drag the large <br/>
+``||animation:animate [mySprite]||`` <br/>
+block into the empty <br/>
+``||controller:on [right] button [pressed]||`` <br/>
+container.
 
-► Click the empty grey box and toggle to **My Assets** to choose the **walk right** animation.
+- :paint brush: Click the empty grey box and toggle to **My Assets** to choose the **walk right** animation.
 
-► Toggle **loop** to **`<ON>`** so the monkey continues to walk.
+- :mouse pointer: Toggle **loop** to **`<ON>`** so the monkey continues to walk.
 
 
 
@@ -64,19 +70,13 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 
 
 
-## Step 5 - Walk Left
+## 5. Walk Left
 
-**⬅️ And Left ⬅️**
+**⬅️ And Left**
 
 ---
 
-► Drag another ``||controller:on [A] button [pressed]||`` into an empty area of the workspace. 
-
-► Click ``||controller:A||`` and choose ``||controller:left||`` from the dropdown.
-
-► Drag ``||animation:animate [mySprite]||`` into the empty ``||controller:on [left] button [pressed]||`` container. 
-
-► Click the grey box and toggle to **My Assets** to choose the **walk left** animation, then toggle **loop** to **`<ON>`**.
+Look at what you did for the right animation and see if you can figure out what changes to make when for when the left arrow is pressed.
 
 
 ```blocks
@@ -92,7 +92,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 
 
 
-## Try It!
+## 6. Try It!
 
 **🕹️ Try your game 🕹️**
 
@@ -101,23 +101,29 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
 Does your monkey walk right when you click the right arrow? Does it walk left with the left arrow?
 
 
-## Step 9 - Jump!
+## 7. Jump!
 
 Now we need an animation that runs when the monkey jumps!
 
 ---
 
-► Find your ``||controller:on [up] button [pressed]||`` container. 
+- :binoculars: Find your <br/>
+``||controller:on [up] button [pressed]||`` <br/>
+container that's already in the workspace.
 
-► From ``||animation:Animation||``, grab an ``||animation:animate [mySprite]||`` block and drag it into **the end** of the ``||controller:on [up] button [pressed]||`` container. 
+- :sync: Grab an <br/>
+``||animation:animate [mySprite]||`` <br/>
+block and drag it into **the end** of the <br/>
+``||controller:on [up] button [pressed]||`` <br/>
+container.
 
-► Click the empty grey box and toggle to **My Assets** to choose the **jump** animation.
+- :paint brush: Click the empty grey box and toggle to **My Assets** to choose the **jump** animation.
 
 
 
 ```blocks
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    sprites.gravity_jump(mySprite)
+    simplified.gravity_jump(mySprite)
     //@highlight
     animation.runImageAnimation(
     mySprite,
@@ -129,7 +135,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 ```
 
 
-## Try It!
+## 8. Play!
 
 **🕹️ Play your game 🕹️**
 
@@ -139,22 +145,23 @@ Your monkey should look amazing as it runs and jumps!
 
 
 
-## Finished
+## Finale
 
-When you're done playing your game, click **Finish** to return to the main page to learn how to add more levels!
+When you're done playing your game, click **Done** to return to the main skillmap to move on and find out how to add more levels!
 
 
 
 
 ```package
 arcade-background-scroll=github:microsoft/arcade-background-scroll/
+simple-blocks=github:microsoft/arcade-tutorial-extensions/simple-blocks/
 pxt-tilemaps=github:microsoft/pxt-tilemaps/
 ```
 
 
 ```template
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    sprites.gravity_jump(mySprite)
+    simplified.gravity_jump(mySprite)
 })
 scene.setBackgroundImage(assets.image`background`)
 tiles.setTilemap(tilemap`level1`)
@@ -164,16 +171,16 @@ mySprite.ay = 500
 scene.cameraFollowSprite(mySprite)
 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`orange bauble`, function (sprite, location) {
-    tiles.setTileAt(location, assets.tile`transparency16`)  
+    tiles.setTileAt(location, assets.tile`transparency16`)
     info.changeScoreBy(1)
 })
 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, location) {
-    game.over(true)
+    game.gameOver(true)
 })
 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`poison pit`, function (sprite, location) {
-    game.over(false)
+    game.gameOver(false)
 })
 
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -211,19 +218,6 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 })
 ```
 
-
-```customts
-
-namespace sprites {
-    //% block="make $thisSprite=variables_get(mySprite) gravity jump"
-        export function gravity_jump (thisSprite: Sprite) {
-        if (thisSprite.isHittingTile(CollisionDirection.Bottom)) {
-            thisSprite.vy = -200
-        }
-    }
-}
-
-```
 
 
 ```assetjson

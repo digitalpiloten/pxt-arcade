@@ -21,7 +21,7 @@
         "core---nrf52": "file:../core---nrf52",
         "screen---st7735": "file:../screen---st7735",
         "mixer---nrf52": "file:../mixer---nrf52",
-        "game": "file:../game"    
+        "game": "file:../game"
     },
     "public": true,
     "skipLocalization": true,
@@ -32,10 +32,13 @@
         },
         "config": {
             "DEVICE_USB": 0,
-            "DEVICE_WEBUSB": 0
+            "DEVICE_WEBUSB": 0,
+            "DEVICE_BLE": 0,
+            "ARCADE_MBIT_CODAL": 1,
+            "MICROBIT_CODAL": 0
         }
     },
-    "experimentalHw": true,
+    "hidden": true,
     "dalDTS": {
         "corePackage": "../core---nrf52"
     }

@@ -11,15 +11,15 @@ In this activity, the student will continue to work with:
 
 ## Concept: ``||sprites:Kind||`` Overlap Event "bump" action
 
-[![Link to Video](/static/thumbnail_play_video.png)](https://lexvideoassets.blob.core.windows.net/finalfiles/40545A/intro%20cs:%20makecode%20arcade%20%28unit%201%29/overlap2BumpFinal.mp4)
+[![Link to Video](/static/thumbnail_play_video.png)](https://youtu.be/c4IkWhgS9l0)
 
 Having sprites bump rather than pass over each other is useful game behavior for a ``||sprites:kind||`` overlap event. One way to simulate a bump is:
 
 1. Move the sprite in the opposite direction after the overlap (we will make it bump backwards). The faster we bump, the farther we move away from the overlap object
-2. Stop the sprite
-    * Set ``||sprites:vx||`` and ``||sprites:vy||`` to 0
     * Change x position by (-1) \* (``||sprites:vx||``)
     * Change y position by (-1) \* (``||sprites:vy||``)
+2. Stop the sprite
+    * Set ``||sprites:vx||`` and ``||sprites:vy||`` to 0
 3. Shake the stationary object (cloud)
     * Move 1 pixel (in any direction)
     * ``||loops:pause||``

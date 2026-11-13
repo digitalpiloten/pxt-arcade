@@ -2,7 +2,7 @@
 
 It's often needed to connect a SWD debugger to a board.
 
-We found [Black Magic Probe](https://github.com/blacksphere/blackmagic/wiki) to work well,
+We found [Black Magic Probe](https://github.com/blackmagic-debug/blackmagic) to work well,
 for a variety of MCUs, and it doesn't require openocd.
 You can use their beautifully made hardware, or flash an existing
 board with Black Magic firmware.
@@ -19,7 +19,7 @@ special proprietary (and expensive) connector cable.
 Here we propose two simple and cost effective solutions, which do not require soldering,
 and has zero PCB cost.
 
-## Hack-connect XS
+## Hack-connect XS / JacConnect
 
 The idea is to use a standard 2x5 pin 0.05" IDC ARM-Cortex debug connector
 and plug in a male 0.05" header into it (a male 0.05" IDC could be also used,
@@ -69,7 +69,7 @@ and glue.
 ![Splitting the cable](/docs/static/hardware/dbg/breakout-0.jpg)
 
 Cut the IDC cable in half.
-You will the half with the notch facing outside (also see the picture of assambled cable above).
+You will the half with the notch facing outside (also see the picture of assembled cable above).
 Separate the first 5 wires, counting from the red write number 1.
 
 ![Removing insulation](/docs/static/hardware/dbg/breakout-1.jpg)

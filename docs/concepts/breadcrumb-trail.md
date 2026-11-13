@@ -1,6 +1,6 @@
 # Breadcrumb Trail
 
-## Introduction @unplugged
+## {Introduction @unplugged}
 
 Placing ``||sprites:sprites||`` on a ``||scene:tilemap||`` can be a great way to set up levels
 for your player to explore. These ``||sprites:sprites||`` can be used as decoration
@@ -10,7 +10,7 @@ In this case, you will create a scene where breadcrumbs are placed on the grass 
 
 ![Breadcrumb trail being created](/static/concepts/breadcrumb-trail/breadcrumb-trail.gif)
 
-## Step 1
+## {Step 1}
 
 Find ``||scene:set tilemap to||`` in ``||scene:Scene||``
 and drag it into the ``||loops:on start||``.
@@ -20,7 +20,7 @@ Open the tilemap editor and use the paint bucket tool to fill the canvas with a 
 tiles.setTilemap(tilemap`level_0`)
 ```
 
-## Step 2
+## {Step 2}
 
 Open the image editor for the ``||scene:tilemap||`` again.
 Draw a path from the **top left** to the **bottom right** with a different tile.
@@ -29,7 +29,7 @@ Draw a path from the **top left** to the **bottom right** with a different tile.
 tiles.setTilemap(tilemap`level_1`)
 ```
 
-## Step 3
+## {Step 3}
 
 Find ``||loops:for element value of list||``
 and place it after the ``||scene:set tilemap to||`` block.
@@ -42,7 +42,7 @@ for (let value of list) {
 }
 ```
 
-## Step 4
+## {Step 4}
 
 Find ``||scene:array of all locations||`` in ``||scene:Scene||``.
 Place it in the ``||loops:for element value of list||`` block on top of ``||variables:list||``.
@@ -56,9 +56,9 @@ for (let value of tiles.getTilesByType(sprites.castle.tileDarkGrass2)) {
 }
 ```
 
-## Step 5
+## {Step 5}
 
-Find ``||sprites:set mySprite to sprite of kind player||`` in ``||sprites:Sprites||``
+Find ``||variables(sprites):set mySprite to sprite of kind player||`` in ``||sprites:Sprites||``
 and drag it into the ``||loops:for element||`` loop.
 Draw breadcrumbs for the image of the sprite.
 This will create a new ``||sprites:Sprite||`` for every one of the
@@ -89,12 +89,12 @@ for (let value of tiles.getTilesByType(sprites.castle.tileDarkGrass2)) {
 }
 ```
 
-## Step 6
+## {Step 6}
 
 Find ``||scene:place mySprite on top of tilemap col row||``
-and place it after ``||sprites:set mySprite to||``.
+and place it after ``||variables(sprites):set mySprite to||``.
 Drag ``||variables:value||`` from the ``||loops:for loop||`` to ``||variables:tilemap col row||``.
-Make sure ``||variables:mySprite||`` is the ``||variables:variable||`` for the
+Make sure ``||variables(noclick):mySprite||`` is the ``||variables:variable||`` for the
 ``||sprites:sprite||`` you just created.
 This will place the breadcrumbs on each ``||scene:tile||`` of the diagonal line.
 
@@ -124,12 +124,12 @@ for (let value of tiles.getTilesByType(sprites.castle.tileDarkGrass2)) {
 }
 ```
 
-## Step 7
+## {Step 7}
 
 If you want to make the tile below the sprite look the same as the others
 so that it doesn't stand out from other tiles,
 find ``||scene:set at tilemap col row||`` in ``||scene:Scene||``
-and place it after ``||variables:set mySprite to||``.
+and place it after ``||variables(sprites):set mySprite to||``.
 Drag ``||variables:value||`` on top of ``||scene:tilemap col row||``,
 and select the tile you want the tile to become (in this case, the same as the other tiles).
 
@@ -162,7 +162,7 @@ for (let value of tiles.getTilesByType(sprites.castle.tileDarkGrass2)) {
 }
 ```
 
-## Complete
+## {Complete}
 
 Congratulations, your forest is complete! If you want to see the breadcrumbs placed one by one,
 add a ``||loops:pause||`` inside the ``||loops:for element||`` loop.

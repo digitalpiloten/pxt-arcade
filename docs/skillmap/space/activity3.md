@@ -67,7 +67,7 @@ scene.cameraShake(4, 500)
 
 **Intergalactic travel is dangerous!**
 
-Let's add some enemies for your ship to avoid.  
+Let's add some enemies for your ship to avoid.
 These could be asteroids, radioactive debris, or angry space sharks!
 
 ![Releasing projectiles](/static/skillmap/space/projectiles.gif "Here, enemy ship. Would you like to borrow an asteroid?")
@@ -80,11 +80,11 @@ These could be asteroids, radioactive debris, or angry space sharks!
 Let's add some code that will drop an enemy toward the ship every second or so.
 
 ---
- 
-► Add an ``||game:on game update every [500] ms||`` container to the workspace  
 
-► Change the last argument to **1000** [__*ms*__](#millis "milliseconds...aka 1/1000 of a second") 
-(or pick **1 second** from the dropdown)    
+► Add an ``||game:on game update every [500] ms||`` container to the workspace
+
+► Change the last argument to **1000** [__*ms*__](#millis "milliseconds...aka 1/1000 of a second")
+(or pick **1 second** from the dropdown)
 <br/>
 
 ```blocks
@@ -95,35 +95,35 @@ game.onUpdateInterval(1000, function () {
 ## Step 2
 
 ► In the ``||sprites:Sprites||`` category, find the
-``||variables:set [projectile2] to projectile [ ] from side with vx [50] vy [50]||`` block
+``||variables(sprites):set [projectile2] to projectile [ ] from side with vx [50] vy [50]||`` block
 and drag it into the new **on game update** container.
 
-► Click on the ``||variables:[projectile2]||`` value inside the new block and 
-select "Rename variable..."  
+► Click on the ``||variables(noclick):[projectile2]||`` value inside the new block and
+select "Rename variable..."
 
-► Change the variable name to ``||variables:myEnemy||`` so we know these are the baddies.  
+► Change the variable name to ``||variables(noclick):myEnemy||`` so we know these are the baddies.
 <br/>
 ```blocks
 let myEnemy: Sprite = null
 game.onUpdateInterval(1000, function () {
     // @highlight
     myEnemy = sprites.createProjectileFromSide(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
         `, 50, 50)
 })
 ```
@@ -133,11 +133,11 @@ game.onUpdateInterval(1000, function () {
 
 ---
 
-► Click the grey square inside the new block to design your enemy  
-(or choose one from the gallery).  
+► Click the grey square inside the new block to design your enemy
+(or choose one from the gallery).
 
-► Play with the **vx** and **vy** values of **myEnemy** until 
-your new sprites are falling straight down the side of the screen. 
+► Play with the **vx** and **vy** values of **myEnemy** until
+your new sprites are falling straight down the side of the screen.
 
 
 ```blocks
@@ -168,30 +168,30 @@ game.onUpdateInterval(1000, function () {
 ## Step 4
 
 
-Enemies aren't likely to hit the ship if they're all the way off to the side, 
+Enemies aren't likely to hit the ship if they're all the way off to the side,
 so let's add an element of surprise using [__*random numbers*__](#randos "numbers appearing seemingly without a predictable pattern") .
 
 ---
 
 
-► Snap a ``||sprites:set [mySprite] [x] to [0]||`` block into the 
-end of the **on game update** container.  
+► Snap a ``||sprites:set [mySprite] [x] to [0]||`` block into the
+end of the **on game update** container.
 
-► To make sure we're acting on the right sprites, use the dropdown in the 
-new block to change ``||variables:mySprite||`` to ``||variables:myEnemy||``.
+► To make sure we're acting on the right sprites, use the dropdown in the
+new block to change ``||variables(noclick):mySprite||`` to ``||variables(noclick):myEnemy||``.
 
-► Set a random [__*x*__](#setX "horizontal location") 
+► Set a random [__*x*__](#setX "horizontal location")
 for the enemies using a
 ``||Math:pick random [0] to [10]||`` block from the ``||Math:Math||`` category.
 Connect it to replace the **0** in the  **set mySprite x** block.
 
 ► Finally, update the minimum argument of the ``||Math:pick random [0] to [10]||`` block to **5** and the
-maximum argument to **155**. 
+maximum argument to **155**.
 
 ---
 
-**Tip:** The Arcade screen is 160px wide, 
-so you could make your enemies fall anywhere between 0 and 160 
+**Tip:** The Arcade screen is 160px wide,
+so you could make your enemies fall anywhere between 0 and 160
 and still be able to see a piece of them.
 
 ```blocks
@@ -225,16 +225,16 @@ game.onUpdateInterval(1000, function () {
 ## Step 5
 
 You might want to add lots of different kinds of enemies plummeting from above.
-We can make sure they all have the same effect using the 
+We can make sure they all have the same effect using the
 "**Enemy**" [__*class*__](#withClass "a label you give a particular group so you can refer to it later").
 
 ---
 
-► Snap a ``||sprites:set [mySprite] kind to [Player]||`` block into the bottom of the 
-**on game update** container. 
+► Snap a ``||sprites:set [mySprite] kind to [Player]||`` block into the bottom of the
+**on game update** container.
 
-► Change ``||variables:mySprite||`` to ``||variables:myEnemy||``, then choose 
- ``||sprites:Enemy||`` as the kind.  
+► Change ``||variables(noclick):mySprite||`` to ``||variables(noclick):myEnemy||``, then choose
+ ``||sprites:Enemy||`` as the kind.
  <br/>
 
 
@@ -257,7 +257,7 @@ game.onUpdateInterval(1000, function () {
         . . . . . 2 . 2 2 . 2 . . . . .
         . . . . . . 2 . . 2 . . . . . .
         . . . . . . 2 . . 2 . . . . . .
-        . . . . . . . 2 2 . . . . . . . 
+        . . . . . . . 2 2 . . . . . . .
         `, 0, 50)
     myEnemy.x = randint(5, 155)
     //@highlight
@@ -274,21 +274,21 @@ game.onUpdateInterval(1000, function () {
 **💥 Time to create some enemy behavior 💥**
 
 To add excitement to the game, let's make something happen when an enemy
-collides with our ship. 
+collides with our ship.
 
 ---
 
 
-► Drag an ``||sprites:on [sprite] of kind [Player] overlaps [othersprite] of kind [Player]||`` 
-container into the workspace. 
+► Drag an ``||sprites:on [sprite] of kind [Player] overlaps [othersprite] of kind [Player]||``
+container into the workspace.
 
-► Change the last argument from ``||variables:Player||`` to ``||variables:Enemy||``.
+► Change the last argument from ``||variables(noclick):Player||`` to ``||variables(noclick):Enemy||``.
 
 ---
 
 **Tip:** Don't try to change "sprite" → "mySprite" or "otherSprite" → "myEnemy".
 The "sprite" and "otherSprite" arguments here describe two general kinds of sprites on the screen
-(not the specific creations we gave names to earlier.) 
+(not the specific creations we gave names to earlier.)
 
 ```blocks
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
@@ -298,22 +298,22 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
 
 ## Step 7
 
-When the enemy collides with the ship, 
-we want it to subtract a life...then disappear. 
+When the enemy collides with the ship,
+we want it to subtract a life...then disappear.
 
 ---
 
 
-► Grab the ``||info:change life by [-1]||`` block from the ``||info:Info||`` category and snap it into the 
-**on player overlaps enemy** container. 
+► Grab the ``||info:change life by [-1]||`` block from the ``||info:Info||`` category and snap it into the
+**on player overlaps enemy** container.
 That removes a life from the player every time it's hit by an enemy.
 
-► Find the ``||sprites:destroy [mySprite] ⊕||`` block and snap it below the previous block. 
+► Find the ``||sprites:destroy [mySprite] ⊕||`` block and snap it below the previous block.
 
-► To tell the **destroy** block that you want it to affect the overlapping enemy, 
-click on the ``||variables:otherSprite||`` variable from the top of the 
-**overlaps** container and drag it down to replace the 
-``||variables:mySprite||`` argument in ``||sprites:destroy [mySprite] ⊕||``.
+► To tell the **destroy** block that you want it to affect the overlapping enemy,
+click on the ``||variables(noclick):otherSprite||`` variable from the top of the
+**overlaps** container and drag it down to replace the
+``||variables(noclick):mySprite||`` argument in ``||sprites:destroy [mySprite] ⊕||``.
 ![Grabbing variable from block](/static/skillmap/space/give-var.gif "So that's how you do that!")
 
 ---
@@ -338,15 +338,15 @@ destroy our enemies on impact.
 ---
 
 
-► Drag another ``||sprites:on [sprite] of kind [Player] overlaps [othersprite] of kind [Player]||`` 
+► Drag another ``||sprites:on [sprite] of kind [Player] overlaps [othersprite] of kind [Player]||``
 container into the workspace.
 
-► Change the first kind to ``||sprites:Enemy||`` and the second kind to
-``||sprites:Projectile||``. 
+► Change the first kind to ``||sprites(noclick):Enemy||`` and the second kind to
+``||sprites(noclick):Projectile||``.
 
 ► Inside, add two ``||sprites:destroy [mySprite] ⊕||`` blocks, then change the arguments
-so that one destroys the enemy (``||variables:sprite||``) and the other 
-destroys your projectile (``||variables:otherSprite||``).
+so that one destroys the enemy (``||variables(noclick):sprite||``) and the other
+destroys your projectile (``||variables(noclick):otherSprite||``).
 
 ---
 
@@ -360,13 +360,13 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Projectile, function (sprite, oth
 })
 ```
 
-## Complete 
+## Complete
 
 **Congratulations**
 
-Now you have a full barrage of enemies to combat!  
-Don't forget to look at your project on the game screen before you click "Finish".
+Now you have a full barrage of enemies to combat!
+Don't forget to look at your project on the game screen before you click "Done".
 
-Once you have it like you want it, click **Finish** to return to the main page where you can share your game
+Once you have it like you want it, click **Done** to return to the main page where you can share your game
 with family and friends!
 

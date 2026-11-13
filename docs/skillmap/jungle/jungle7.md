@@ -3,7 +3,7 @@
 
 ## Welcome @showdialog
 
-**Time to Level Up!**  
+**Time to Level Up!**
 
 This activity will show you how to add extra levels to your game.
 
@@ -11,58 +11,64 @@ This activity will show you how to add extra levels to your game.
 
 
 
-## Step 2 - Try It!
+## 2. Try It!
 
-**🕹️ Start by playing your game in the game window 🕹️**
+**🕹️ Start by playing your game in the game window**
 
 ---
 
 Can you remember which chunk of code creates each action?
 
 
-## Step 3 - Not So Fast
+## 3. Not So Fast
 
-**🗝️ Find a second chest to win the game 🗝️**  
+**Find a second chest to win the game**
 
 ---
 
-► Look for your ``||game:game over <WIN>||`` block inside of the **Player overlaps chest1** container.
+- :binoculars: Look for your <br/>
+``||game:game over <WIN>||`` <br/>
+block inside of the **Player overlaps chest1** container.
 
-► Click the image of **chest1** and change it to **chest2**.
+- :mouse pointer: Click the image of **chest1** and change it to **chest2**.
 
 ```blocks
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest2`, function (sprite, location) {
-    game.over(true)
+    game.gameOver(true)
 })
 ```
 
-## Step 4 - A New Level
+## 4. A New Level
 
-**🙌 Add a New Level 🙌**   
+**🙌 Add a New Level 🙌** <br/>
 When we get to the first chest, we want to take the player to a new level.
 
 ---
 
-► From ``||scene:Scene||``, drag ``||scene:on [sprite] of kind [Player] overlaps [ ] at [location]||`` into an empty area of the workspace. 
+- :tree: Drag <br/>
+``||scene:on [sprite] of kind [Player] overlaps [ ] at [location]||`` <br/>
+into an empty area of the workspace.
 
-► Click the empty square and choose **chest1**. 
+- :paint brush: Click the empty square and choose **chest1**.
 
 
 
 ```blocks
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, location) {
-    
+
 })
 ```
 
 
 
-## Step 5 - Change of Scenery
+## 5. Change of Scenery
 
 
-► To show the player that the level has changed, go to ``||scene:Scene||`` and drag ``||scene:set background image to [ ]||`` into the empty **Player overlaps chest1** container.
+- :tree: To show the player that the level has changed, drag <br/>
+``||scene:set background image to [ ]||`` <br/>
+into the empty **Player overlaps chest1** container.
 
-► Click the grey square and toggle to **My Assets** to choose **background2**. 
+- :paint brush: Click the grey square and toggle to **My Assets** to choose **background2**.
 
 
 ```blocks
@@ -72,12 +78,14 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, lo
 ```
 
 
-## Step 6 - Change of Location
+## 6. Change of Location
 
 
-► To change the level tilemap, go to ``||scene:Scene||`` and drag ``||scene:set tilemap to [ ]||`` to **the end** of the **Player overlaps chest1** container.
+- :tree: To change the level tilemap, drag <br/>
+``||scene:set tilemap to [ ]||`` <br/>
+to **the end** of the **Player overlaps chest1** container.
 
-► Click the grey square and toggle to **My Assets** to choose **level2**. 
+- :paint brush: Click the grey square and toggle to **My Assets** to choose **level2**.
 
 
 ```blocks
@@ -89,17 +97,21 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, lo
 ```
 
 
-## Step 9 - Back to the Beginning
+## 7. Back to the Beginning
 
-**⏪ Here we go again! ⏪**
+**⏪ Here we go again!**
 
 ---
 
-► To carry your character back to the beginning of the level,  visit the ``||animation:Animation||`` category and drag the ``||animation:animate [mySprite] with [fly to center]||`` block into **the end** of the **Player overlaps chest1** container.
+- :sync: To carry your character back to the beginning of the level,  drag the <br/>
+``||animation:animate [mySprite] with [fly to center]||`` <br/>
+block into **the end** of the **Player overlaps chest1** container.
 
-► From the ``||sprites:Sprites||`` category, drag ``||sprites:[mySprite] say [":)"]||`` into **the end** of the **Player overlaps chest1** container.
+- :paper plane: Drag <br/>
+``||sprites:[mySprite] say [":)"]||`` <br/>
+into **the end** of the **Player overlaps chest1** container.
 
-► Change the text to say **Level 2!** and click the white plus **(+)** to the right of the block so that the text disappears after 500 ms.
+- :mouse pointer: Change the text to say **Level 2!** and click the white plus **(+)** to the right of the block so that the text disappears after 500 ms.
 
 ```blocks
 let mySprite: Sprite = null
@@ -117,7 +129,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, lo
 ```
 
 
-## Try It!
+## 8. Try It!
 
 **🕹️ Give it a try 🕹️**
 
@@ -128,25 +140,26 @@ Make your way to the treasure chest. You should be transported to a new level!
 
 ## Finished
 
-**🥳 Congratulations 🥳**
+**🥳 Congratulations 🥳** <br/>
 You did it!!  Can you play your game all the way to the end?
 
 ---
 
-When you're done playing your game, click **Finish** to return to the main page for your certificate and the option to customize your final game!
+When you're done playing your game, click **Done** to return to the main skillmap for your certificate and the option to customize your final game!
 
 
 
 
 ```package
 arcade-background-scroll=github:microsoft/arcade-background-scroll/
+simple-blocks=github:microsoft/arcade-tutorial-extensions/simple-blocks/
 pxt-tilemaps=github:microsoft/pxt-tilemaps/
 ```
 
 
 ```template
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
-    sprites.gravity_jump(mySprite)
+    simplified.gravity_jump(mySprite)
     animation.runImageAnimation(
     mySprite,
     assets.animation`jump`,
@@ -162,16 +175,16 @@ mySprite.ay = 500
 scene.cameraFollowSprite(mySprite)
 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`orange bauble`, function (sprite, location) {
-    tiles.setTileAt(location, assets.tile`transparency16`)  
+    tiles.setTileAt(location, assets.tile`transparency16`)
     info.changeScoreBy(1)
 })
 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`chest1`, function (sprite, location) {
-    game.over(true)
+    game.gameOver(true)
 })
 
 scene.onOverlapTile(SpriteKind.Player, assets.tile`poison pit`, function (sprite, location) {
-    game.over(false)
+    game.gameOver(false)
 })
 
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -225,19 +238,6 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 ```
 
-
-```customts
-
-namespace sprites {
-    //% block="make $thisSprite=variables_get(mySprite) gravity jump"
-        export function gravity_jump (thisSprite: Sprite) {
-        if (thisSprite.isHittingTile(CollisionDirection.Bottom)) {
-            thisSprite.vy = -200
-        }
-    }
-}
-
-```
 
 
 ```assetjson

@@ -2,15 +2,15 @@
 
 ### @explicitHints true
 
-## Introduction @unplugged
+## {Introduction @unplugged}
 
 Flowers make everyone around them happier, especially the bees who get nectar from them. To show this, we can create a flower that sends happy little bees back to the hive.
 
 ![Happy thoughts](/static/tutorials/happy-flower/happy-thoughts.gif)
 
-## Step 1
+## {Step 1}
 
-First, ``||scene:set background color to||`` ``light blue``. Create a new sprite called ``||variables:mySprite||``. Draw a flower as the image for the sprite.
+First, ``||scene:set background color to||`` ``light blue``. Create a new sprite called ``||variables(noclick):mySprite||``. Draw a flower as the image for the sprite.
 
 ```spy
 scene.setBackgroundColor(9)
@@ -34,7 +34,7 @@ let mySprite = sprites.create(img`
 `, SpriteKind.Player)
 ```
 
-## Step 2
+## {Step 2}
 
 Put in an ``||game:on update||`` event for an interval of ``1000`` milliseconds.
 
@@ -63,10 +63,10 @@ game.onUpdateInterval(1000, function () {
 })
 ```
 
-## Step 3
+## {Step 3}
 
-Add code in the ``||game:on game update interval||`` event to set a ``||variables:projectile||``
-variable to a ``||sprites:projectile sprite from||`` the ``||variables:mySprite||``
+Add code in the ``||game:on game update interval||`` event to set a ``||variables(noclick):projectile||``
+variable to a ``||sprites:projectile sprite from||`` the ``||variables(noclick):mySprite||``
 sprite. Set the velocities for both ``vx`` and ``vy`` to `0`.
 
 ```spy
@@ -111,7 +111,7 @@ game.onUpdateInterval(1000, function () {
 })
 ```
 
-## Step 4
+## {Step 4}
 
 In the image editor for ``||sprites:projectile||``, make a nice little bee.
 
@@ -157,9 +157,9 @@ game.onUpdateInterval(1000, function () {
 })
 ```
 
-## Step 5
+## {Step 5}
 
-For ``||variables:projectile||``, use a ``||Math:random||`` number for the ``vx`` velocity. Set
+For ``||variables(noclick):projectile||``, use a ``||Math:random||`` number for the ``vx`` velocity. Set
 the range to ``||Math:pick a random||`` between `-25` and `25`.
 
 ```spy
@@ -204,7 +204,7 @@ game.onUpdateInterval(1000, function () {
 })
 ```
 
-## Step 6
+## {Step 6}
 
 Now, for the ``vy`` velocity for ``||sprites:projectile||``, set it to ``||Math:pick a random||`` number from `-25` to `25`.
 
@@ -250,9 +250,9 @@ game.onUpdateInterval(1000, function () {
 })
 ```
 
-## Step 7 @fullscreen
+## {Step 7 @fullscreen}
 
-After the code to create the ``||variables:projectile||``, add code to set ``||sprites:lifespan||``
+After the code to create the ``||variables(noclick):projectile||``, add code to set ``||sprites:lifespan||``
 to `3000`.
 
 ```spy
@@ -298,14 +298,14 @@ game.onUpdateInterval(1000, function () {
 })
 ```
 
-## Step 8
+## {Step 8}
 
 Congratulations, your happy flower is complete! It will now send back joyful little bees. Go run your program in the simulator and see the bees fly away. Did you notice that some of the bees are fly backwards? Do you want to try something extra? If so, we can have some of the bees fly off facing in the opposite direction. Continue on with the next step.
 
-## Step 9
+## {Step 9}
 
-Let's setup a condition to change the image of the bee when it flys off toward the left.
-Put in a conditional that checks ``||logic:if||`` the ``vx`` value for ``||variables:projectile||`` is
+Let's setup a condition to change the image of the bee when it flies off toward the left.
+Put in a conditional that checks ``||logic:if||`` the ``vx`` value for ``||variables(noclick):projectile||`` is
 less than `0`.
 
 ```spy
@@ -353,13 +353,13 @@ game.onUpdateInterval(1000, function () {
 })
 ```
 
-## Step 10
+## {Step 10}
 
 Inside the code block that checks ``||logic:if||`` the ``vx`` velocity is less than
 `0`, put in code to ``||images:flip horizontally||`` the ``||sprites:image||`` for
-``||variables:projectile||``. If you are using the Toolbox code, be careful to change
+``||variables(noclick):projectile||``. If you are using the Toolbox code, be careful to change
 the default image given for ``||images:flip horizontally||`` to be the image property
-for the ``||variables:projectile||`` instead.
+for the ``||variables(noclick):projectile||`` instead.
 
 
 ```spy
@@ -408,6 +408,6 @@ game.onUpdateInterval(1000, function () {
 })
 ```
 
-## Complete
+## {Complete}
 
 Alright, now you have bees happily flying away in both directions!

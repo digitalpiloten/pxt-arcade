@@ -110,15 +110,15 @@ tiles.setTilemap(tilemap`level`)
 
 ## Camera
 
-**Take a moment to move the player sprite around on the game screen. ** 
+**Take a moment to move the player sprite around on the game screen. **
 
-Right now, the camera isn't following when the player moves off screen.  
+Right now, the camera isn't following when the player moves off screen.
 We can fix that!
 
 ---
 
 
-► Drag ``||scene:camera follow sprite [mySprite]||`` into the bottom 
+► Drag ``||scene:camera follow sprite [mySprite]||`` into the bottom
 of the ``||loops:on start||`` container.
 <br/>
 
@@ -150,7 +150,7 @@ tiles.setTilemap(tilemap`level`)
 scene.cameraFollowSprite(mySprite)
 ```
 
-## Start Tile 
+## Start Tile
 
 **🎥 Now we can move around and the camera will follow 🎥 **
 
@@ -162,16 +162,16 @@ Let's change the game so your player starts somewhere safe.
 ---
 
 
-► Snap a ``||scene:place [mySprite] on top of random [ ]||`` block 
+► Snap a ``||scene:place [mySprite] on top of random [ ]||`` block
 into the bottom of the ``||loops:on start||`` container.
 
 ► Click the checkerboard tile and replace it with the green flag.
 
 ---
 
-**Now your sprite starts on the green flag tile!**  
+**Now your sprite starts on the green flag tile!**
 
-**Tip:** If you want your sprite to start somewhere else, 
+**Tip:** If you want your sprite to start somewhere else,
 you can move the green flag by editing the
 [__tilemap__](#tilemp "a grid of square tiles that makes up our background").
 
@@ -213,7 +213,7 @@ When the player overlaps the skull tile, we'll trigger a "GAME OVER".
 ---
 
 
-► Drag the ``||scene:on [sprite] of kind [Player] overlaps [ ] at [location]||`` container 
+► Drag the ``||scene:on [sprite] of kind [Player] overlaps [ ] at [location]||`` container
 into the workspace.
 
 ► Click the checkerboard image and change it to the skull tile.
@@ -223,29 +223,29 @@ into the workspace.
 
 ```blocks
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile2, function (sprite, location) {
-    game.over(false)
+    game.gameOver(false)
 })
 ```
 
 ## You Win Pt. 1
 
-**🎈 We have a way to lose, let's add a way to win 🎈** 
+**🎈 We have a way to lose, let's add a way to win 🎈**
 
 ---
 
 
-► Drag another ``||scene:on [sprite] of kind [Player] overlaps [ ] at [location]||`` 
+► Drag another ``||scene:on [sprite] of kind [Player] overlaps [ ] at [location]||``
 container into the workspace.
 
 ► This time, change the checkerboard to the trophy tile.
 
-► Snap a ``||game:game over <LOSE>||`` block into the new container and toggle 
+► Snap a ``||game:game over <LOSE>||`` block into the new container and toggle
 the &lt;LOSE&gt; switch to &lt;WIN&gt;!
 <br/>
 
 ```blocks
 scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location) {
-    game.over(true)
+    game.gameOver(true)
 })
 ```
 
@@ -253,11 +253,11 @@ scene.onOverlapTile(SpriteKind.Player, myTiles.tile4, function (sprite, location
 
 **🎮 Make sure to try your game in the simulator 🎮**
 
-If you want to change the experience, try opening the [__tilemap__](#tilemp "a grid of square tiles that makes up our background") 
-editor to design your own level. 
+If you want to change the experience, try opening the [__tilemap__](#tilemp "a grid of square tiles that makes up our background")
+editor to design your own level.
 
 ---
- 
+
 **Tip:** Make sure you use the wall tool to mark anything you don't want your sprites
 to travel through!
 
@@ -266,5 +266,5 @@ to travel through!
 
 **Now we have a simple platformer that has a way to win and a way to lose.**
 
-Click **Finish** to return to the main page where you can share your game
+Click **Done** to return to the main page where you can share your game
 with family and friends!

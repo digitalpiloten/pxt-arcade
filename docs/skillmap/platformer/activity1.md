@@ -75,13 +75,13 @@ tiles.setTilemap(tilemap`level`)
 
 ## Welcome @showdialog
 
-Now let's take a look at the [__*sidescrolling*__](#scrolld "games that are viewed from the side, with most of the action happening horizontally") 
-[__*platformer*__](#plat "games that rely on jump and run as their main mechanic").  
+Now let's take a look at the [__*sidescrolling*__](#scrolld "games that are viewed from the side, with most of the action happening horizontally")
+[__*platformer*__](#plat "games that rely on jump and run as their main mechanic").
 
 This kind of game peeks in on the action from the side, using "jump" and "run"
-as the main mechanics.  
+as the main mechanics.
 
-By the time you finish this set of tutorials, you should know all you need 
+By the time you finish this set of tutorials, you should know all you need
 to make a fun and engaging arcade game worth sharing.
 
 ![Our first platformer](/static/skillmap/platformer/platformer1.gif "Look what we're about to learn today!")
@@ -91,16 +91,16 @@ to make a fun and engaging arcade game worth sharing.
 
 **The first thing any good platformer needs is a main character. 🐒**
 
-In Arcade, our characters are [__*sprites*__](#sprote "2-D images that move on the screen").  
-We'll want to create our main sprite and get it moving before we do anything else. 
+In Arcade, our characters are [__*sprites*__](#sprote "2-D images that move on the screen").
+We'll want to create our main sprite and get it moving before we do anything else.
 
 ---
 
-► From the ``||sprites:Sprites||`` category, drag the ``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` 
+► From the ``||sprites:Sprites||`` category, drag the ``||variables(sprites):set [mySprite] to sprite [ ] of kind [Player]||``
 block to the end of the ``||loops:on start||`` container.
 
 ► Click on the grey box in the middle of your
- ``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` block
+ ``||variables(sprites):set [mySprite] to sprite [ ] of kind [Player]||`` block
  to open the sprite editor.  From there, you can switch over to "Gallery"
  and choose a pre-drawn character.
 
@@ -115,22 +115,22 @@ scene.setBackgroundColor(11)
 tiles.setTilemap(tilemap`level`)
 // @highlight
 let mySprite = sprites.create(img`
-. . . . . f f f f f . . . . . . 
-. . . . f e e e e e f . . . . . 
-. . . f d d d d d e e f . . . . 
-. . f f f d d f f d e f f . . . 
-. c d d e e d d d d e d d f . . 
-. c c d d d d c d d e d f f f . 
-. c d c c c c d d d e d f b d f 
-. . c d d d d d d e e f f d d f 
-. . . c d d d d e e f f e f f f 
-. . . . f f f e e f e e e f . . 
-. . . . f e e e e e e e f f f . 
-. . . f e e e e e e f f f e f . 
-. . f f e e e e f f f f f e f . 
-. f b d f e e f b b f f f e f . 
-. f d d f e e f d d b f f f f . 
-. f f f f f f f f f f f f f . . 
+. . . . . f f f f f . . . . . .
+. . . . f e e e e e f . . . . .
+. . . f d d d d d e e f . . . .
+. . f f f d d f f d e f f . . .
+. c d d e e d d d d e d d f . .
+. c c d d d d c d d e d f f f .
+. c d c c c c d d d e d f b d f
+. . c d d d d d d e e f f d d f
+. . . c d d d d e e f f e f f f
+. . . . f f f e e f e e e f . .
+. . . . f e e e e e e e f f f .
+. . . f e e e e e e f f f e f .
+. . f f e e e e f f f f f e f .
+. f b d f e e f b b f f f e f .
+. f d d f e e f d d b f f f f .
+. f f f f f f f f f f f f f . .
     `, SpriteKind.Player)
 ```
 
@@ -140,33 +140,33 @@ let mySprite = sprites.create(img`
 
 ---
 
-► Drag a ``||controller:move [mySprite] with buttons ⊕||`` block.   
+► Drag a ``||controller:move [mySprite] with buttons ⊕||`` block.
 to the end of the ``||loops:on start||`` container
 
-► Press the ⊕ button on the new block and change the [__*vy*__](#whatVY "vertical velocity") 
-argument to **0** so that the player won't move up or down with the joypad.  
+► Press the ⊕ button on the new block and change the [__*vy*__](#whatVY "vertical velocity")
+argument to **0** so that the player won't move up or down with the joypad.
 
 
 ```blocks
 scene.setBackgroundColor(11)
 tiles.setTilemap(tilemap`level`)
 let mySprite = sprites.create(img`
-. . . . . f f f f f . . . . . . 
-. . . . f e e e e e f . . . . . 
-. . . f d d d d d e e f . . . . 
-. . f f f d d f f d e f f . . . 
-. c d d e e d d d d e d d f . . 
-. c c d d d d c d d e d f f f . 
-. c d c c c c d d d e d f b d f 
-. . c d d d d d d e e f f d d f 
-. . . c d d d d e e f f e f f f 
-. . . . f f f e e f e e e f . . 
-. . . . f e e e e e e e f f f . 
-. . . f e e e e e e f f f e f . 
-. . f f e e e e f f f f f e f . 
-. f b d f e e f b b f f f e f . 
-. f d d f e e f d d b f f f f . 
-. f f f f f f f f f f f f f . . 
+. . . . . f f f f f . . . . . .
+. . . . f e e e e e f . . . . .
+. . . f d d d d d e e f . . . .
+. . f f f d d f f d e f f . . .
+. c d d e e d d d d e d d f . .
+. c c d d d d c d d e d f f f .
+. c d c c c c d d d e d f b d f
+. . c d d d d d d e e f f d d f
+. . . c d d d d e e f f e f f f
+. . . . f f f e e f e e e f . .
+. . . . f e e e e e e e f f f .
+. . . f e e e e e e f f f e f .
+. . f f e e e e f f f f f e f .
+. f b d f e e f b b f f f e f .
+. f d d f e e f d d b f f f f .
+. f f f f f f f f f f f f f . .
     `, SpriteKind.Player)
     // @highlight
 controller.moveSprite(mySprite, 100, 0)
@@ -174,11 +174,13 @@ controller.moveSprite(mySprite, 100, 0)
 
 ## Try it
 
-**Be sure to give your game a try on the game screen!**
 
----
+**Check the Game Window**<br/>
+
+Try your game using the joypad or your keyboard.
 
 How do you like it?  Feel like making a few more changes?
+
 
 
 ## Add gravity
@@ -190,10 +192,10 @@ to "pull down" on the sprite.
 
 ---
 
-► Drag a ``||sprites:set [mySprite] [x] to [0]||`` block to the end of 
+► Drag a ``||sprites:set [mySprite] [x] to [0]||`` block to the end of
 the ``||loops:on start||`` container.
 
-► Click the dropdown to change **x** to **ay (acceleration y)** 
+► Click the dropdown to change **x** to **ay (acceleration y)**
 
 ► Replace **0** with **500**.
 <br/>
@@ -204,22 +206,22 @@ the ``||loops:on start||`` container.
 scene.setBackgroundColor(11)
 tiles.setTilemap(tilemap`level`)
 let mySprite = sprites.create(img`
-. . . . . f f f f f . . . . . . 
-. . . . f e e e e e f . . . . . 
-. . . f d d d d d e e f . . . . 
-. . f f f d d f f d e f f . . . 
-. c d d e e d d d d e d d f . . 
-. c c d d d d c d d e d f f f . 
-. c d c c c c d d d e d f b d f 
-. . c d d d d d d e e f f d d f 
-. . . c d d d d e e f f e f f f 
-. . . . f f f e e f e e e f . . 
-. . . . f e e e e e e e f f f . 
-. . . f e e e e e e f f f e f . 
-. . f f e e e e f f f f f e f . 
-. f b d f e e f b b f f f e f . 
-. f d d f e e f d d b f f f f . 
-. f f f f f f f f f f f f f . . 
+. . . . . f f f f f . . . . . .
+. . . . f e e e e e f . . . . .
+. . . f d d d d d e e f . . . .
+. . f f f d d f f d e f f . . .
+. c d d e e d d d d e d d f . .
+. c c d d d d c d d e d f f f .
+. c d c c c c d d d e d f b d f
+. . c d d d d d d e e f f d d f
+. . . c d d d d e e f f e f f f
+. . . . f f f e e f e e e f . .
+. . . . f e e e e e e e f f f .
+. . . f e e e e e e f f f e f .
+. . f f e e e e f f f f f e f .
+. f b d f e e f b b f f f e f .
+. f d d f e e f d d b f f f f .
+. f f f f f f f f f f f f f . .
     `, SpriteKind.Player)
 controller.moveSprite(mySprite, 100, 0)
 // @highlight
@@ -237,13 +239,13 @@ Let's attach a jumping action to the Ⓐ button.
 
 ► Start by dragging an ``||controller:on [A] button [pressed]||`` block into the workspace.
 
-► Inside of that, add ``||sprites:set [mySprite] [x] to [0]||`` . 
+► Inside of that, add ``||sprites:set [mySprite] [x] to [0]||`` .
 
 ► To choose the attribute for the player's [__*vertical velocity*__](#whatVelY "speed in the up/down direction"),
 click the dropdown menu and change **x** to **vy (velocity y)**.
 
 ► The player will jump upward if you change **0** to something smaller.
-Try  **-150** or **-200**.  
+Try  **-150** or **-200**.
 <br/>
 
 
@@ -251,22 +253,22 @@ Try  **-150** or **-200**.
 scene.setBackgroundColor(11)
 tiles.setTilemap(tilemap`level`)
 let mySprite = sprites.create(img`
-. . . . . f f f f f . . . . . . 
-. . . . f e e e e e f . . . . . 
-. . . f d d d d d e e f . . . . 
-. . f f f d d f f d e f f . . . 
-. c d d e e d d d d e d d f . . 
-. c c d d d d c d d e d f f f . 
-. c d c c c c d d d e d f b d f 
-. . c d d d d d d e e f f d d f 
-. . . c d d d d e e f f e f f f 
-. . . . f f f e e f e e e f . . 
-. . . . f e e e e e e e f f f . 
-. . . f e e e e e e f f f e f . 
-. . f f e e e e f f f f f e f . 
-. f b d f e e f b b f f f e f . 
-. f d d f e e f d d b f f f f . 
-. f f f f f f f f f f f f f . . 
+. . . . . f f f f f . . . . . .
+. . . . f e e e e e f . . . . .
+. . . f d d d d d e e f . . . .
+. . f f f d d f f d e f f . . .
+. c d d e e d d d d e d d f . .
+. c c d d d d c d d e d f f f .
+. c d c c c c d d d e d f b d f
+. . c d d d d d d e e f f d d f
+. . . c d d d d e e f f e f f f
+. . . . f f f e e f e e e f . .
+. . . . f e e e e e e e f f f .
+. . . f e e e e e e f f f e f .
+. . f f e e e e f f f f f e f .
+. f b d f e e f b b f f f e f .
+. f d d f e e f d d b f f f f .
+. f f f f f f f f f f f f f . .
     `, SpriteKind.Player)
 controller.moveSprite(mySprite, 100, 0)
 mySprite.ay = 500
@@ -278,8 +280,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 
 ## Done
 
-🔥 **That's it! Now give your game a try!** 🔥  
+🔥 **That's it! Now give your game a try!** 🔥
 
 Can you jump from platform to platform?
 
-Click **Finish** to return to the main page and go on to the next lesson!
+Click **Done** to return to the main page and go on to the next lesson!

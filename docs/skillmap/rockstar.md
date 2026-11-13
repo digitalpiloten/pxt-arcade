@@ -1,13 +1,15 @@
 # 80's Rockstar Maze!
 * name: 80's Rockstar Maze!
-* description: Create a fast-paced maze game by programming a rockstar to move through the crowded backstage area to collect all of their gear before they're mobbed by fans!
-* backgroundurl: /static/skillmap/backgrounds/rockstar.png
-* bannerurl: /static/skillmap/rockstar/rockstar4.gif
+* description: Create a fast-paced maze game by programming a rockstar to move through the crowded backstage area and collect all of their gear before they're mobbed by fans!
+* infoUrl: skillmap/educator-info/rockstar-map-info
+* backgroundurl: /static/skillmap/backgrounds/rockstar-comp.png
+* bannerurl: /static/skillmap/rockstar/rockstar2.gif
 * primarycolor: #ff93c4
-* secondarycolor: #87f2ff
-* tertiarycolor: #5c406c
-* strokecolor: #5c406c
-* highlightcolor: #fff609
+* secondarycolor: #fdf60c
+* tertiarycolor: #161112
+* strokecolor: #ffffff
+* highlightcolor: #ffffff
+* completednodecolor: #3b3738
 
 ## rockstar
 * name: 80's Rockstar Maze
@@ -16,12 +18,12 @@
 ### rockstar1
 * name: Trapped Backstage
 * type: tutorial
-* description: Create a rockstar backstage after the show, then create a door for them to escape through!
+* description: Create a rockstar backstage after the show, then keep an eye on them as they navigate the path!
 * url: /skillmap/rockstar/rockstar1
 * tags: easy, sprites, tiles
 * imageUrl: /static/skillmap/rockstar/rockstar1.gif
 * next: rockstar2
-* position: 0 3
+* position: 1 -1
 
 ### rockstar2
 * name: Gather Your Gear
@@ -31,31 +33,29 @@
 * tags: easy, tiles, events
 * imageUrl: /static/skillmap/rockstar/rockstar2.gif
 * next: rockstar3
-* position: 1 2
+* position: 2 -1
 
 ### rockstar3
-* name: Enemies Attack!
+* name: Avoid the Fans!
 * type: tutorial
-* description: Program crazed fans who steal points as souveniers unless the rockstar can avoid them!
+* description: Code some crazed fans who will steal points as souvenirs unless the rockstar can avoid them!
 * url: /skillmap/rockstar/rockstar3
 * tags: easy, enemies, overlap, lives
 * imageUrl: /static/skillmap/rockstar/rockstar3.gif
-* next: rockstar-finish, rockstar3a
-* position: 2 1
-
-### rockstar3a
-* name: New Location
-* type: tutorial
-* description: Edit your game to make it your own.  You can change all the images to completely customize your maze!
-* url: /skillmap/rockstar/rockstar3a
-* tags: easy, asset editor, art
-* imageUrl: /static/skillmap/rockstar/rockstar3a.gif
-* next: rockstar2
-* position: 3 2
+* next: rockstar-finish
+* position: 3 0
 
 
 ### rockstar-finish
 * kind: completion
 * type: certificate
-* url: /static/skillmap/certificates/rockstar-game.pdf
-* position: 3 0
+* url: /static/skillmap/certificates/rockstar-cert.pdf
+* imageUrl: /static/skillmap/certificates/rockstar-cert.png
+* position: 4 0
+* actions:
+    * map: [Try our Space Explorer](/skillmap/space)
+    * editor: [Mod Your Project](/)
+* rewards:
+    * certificate: /static/skillmap/certificates/rockstar-cert.pdf
+    * completion-badge: /static/badges/badge-rockstar.png
+

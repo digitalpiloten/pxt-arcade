@@ -3,23 +3,33 @@
 ```codecard
 [
     {
-        "name": "Skillmaps",
-        "url": "/skillmaps",
-        "imageUrl": "/static/skillmap/backgrounds/beginner.png"
+        "name": "Beginner Skillmaps",
+        "url": "/beginner-maps",
+        "imageUrl": "/static/skillmap/backgrounds/story-map.png"
+    },
+    {
+        "name": "Next Level Skillmaps",
+        "url": "/inter-maps",
+        "imageUrl": "/static/skillmap/backgrounds/galaxy-map.png"
     },
     {
         "name": "Tutorials",
         "url": "/tutorials",
-        "imageUrl": "/static/tutorials/chase-the-pizza.png",
-        "largeImageUrl": "/static/tutorials/chase-the-pizza.gif",
+        "imageUrl": "/static/tutorials/interface/info.png",
+        "largeImageUrl": "/static/tutorials/interface/info.png",
         "videoUrl": "/static/tutorials/chase-the-pizza.mp4"
     },
     {
-        "name": "Multipart Tutorials",
-        "url": "/multipart-tutorials",
-        "imageUrl": "/static/recipes/shark-splash/shark-splash.png",
-        "largeImageUrl": "/static/recipes/shark-splash/02-C-enemies.gif",
-        "videoUrl": "/static/recipes/shark-splash/02-C-enemies.mp4"
+        "name": "Multiplayer Tutorials",
+        "url": "/multiplayer-tutorials",
+        "imageUrl": "/static/tutorials/pizza-party/playtime.png",
+        "largeImageUrl": "/static/tutorials/pizza-party/playtime.png"
+    },
+    {
+        "name": "Multiplayer Games",
+        "url": "/multiplayer-games",
+        "imageUrl": "/static/multiplayer/perfect-fit.png",
+        "largeImageUrl": "/static/multiplayer/perfect-fit.gif"
     },
     {
         "name": "Live Coding",
@@ -43,7 +53,7 @@
     {
         "name": "Game Jam",
         "url": "/game-jam",
-        "imageUrl": "https://pxt.azureedge.net/api/04978-92601-05637-89537/thumb"
+        "imageUrl": "https://cdn.makecode.com/api/89699-84766-18852-49944/thumb"
     },
     {
         "name": "Advanced Livestream",
@@ -53,9 +63,14 @@
     {
         "name": "Community Games",
         "url": "/community",
-        "imageUrl": "/static/community/salvo/salvo.png",
-        "largeImageUrl": "/static/community/salvo/salvo.gif",
-        "videoUrl": "/static/community/salvo/salvo.mp4"
+        "imageUrl": "/static/discourse/76895-38185-68305-99984.png",
+        "largeImageUrl": "/static/community/blocky-boss-battle/blocky-boss-battle.gif",
+        "videoUrl": "/static/community/blocky-boss-battle/blocky-boss-battle.mp4"
+    },
+    {
+        "name": "Game Jam Hall of Fame",
+        "url": "/game-jam-hall-of-fame",
+        "imageUrl": "https://makecode.com/api/39697-95718-82872-45842/thumb"
     },
     {
         "name": "Game Design Concepts",
@@ -76,20 +91,20 @@
         "imageUrl": "/static/arts-and-crafts/tshirt.png"
     },
     {
-        "name": "Lessons",
-        "url": "/lessons",
-        "imageUrl": "/static/lessons/cherry-pickr.png"
-    },
-    {
         "name": "Courses",
         "url": "/courses",
-        "imageUrl": "/static/courses/csintro1.png",
-        "largeImageUrl": "/static/courses/csintro1.gif"
+        "imageUrl": "/static/courses/csp.png",
+        "largeImageUrl": "/static/courses/csp.png"
     },
     {
-        "name": "Hardware",
-        "url": "/hardware",
-        "imageUrl": "/static/hardware/ghiarcade.jpg"
+        "name": "Arcade Compatible Devices",
+        "url": "/arcade-devices",
+        "imageUrl": "/static/hardware/meowbit.png"
+    },
+    {
+        "name": "DIY Hardware",
+        "url": "/diy-hardware",
+        "imageUrl": "/static/hardware/raspberry-pi/wooden-cabinet/gallery.jpg"
     },
     {
         "name": "How to Make a Game Videos",
@@ -106,21 +121,24 @@
 
 ## See Also
 
-[Skillmaps](/skillmaps),
+[Beginner Skillmaps](/beginner-maps),
+[Next Level Skillmaps](/inter-maps),
 [Tutorials](/tutorials),
-[Multipart Tutorials](/multipart-tutorials),
+[Multiplayer Tutorials](/multiplayer-tutorials),
+[Multiplayer Games](/multiplayer-games),
 [Live Coding](/live-coding),
 [Blocks Games](/blocks-games),
 [JavaScript Games](/javascript-games),
 [Game Jam](/game-jam),
 [Advanced Livestream](/advanced-stream),
 [Community Games](/community),
+[Game Jam Hall of Fame](/game-jam-hall-of-fame),
 [Game Design Concepts](/concepts),
 [Graphics and Math](/graphics-math),
 [Arts and Crafts](/arts-and-crafts),
-[Lessons](/lessons),
 [Courses](/courses),
-[Hardware](/hardware),
+[Arcade Compatible Devices](/arcade-devices),
+[DIY Hardware](/diy-hardware),
 [How to Make a Game Videos](/how-to-make-a-game),
 [John Park's Workshop](/john-parks-workshop)
 

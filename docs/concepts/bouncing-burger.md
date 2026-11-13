@@ -1,14 +1,12 @@
 # Bouncing Burger
 
-[Open this tutorial in the editor!](/#tutorial:/concepts/bouncing-burger)
-
-## Introduction @unplugged
+## {Introduction @unplugged}
 
 ``||sprites:Sprites||`` can be given ``||sprites:x||`` and ``||sprites:y||`` velocities so that they can move around the screen.  In this case, a ``||sprites:Sprite||`` will be used to represent a burger that bounces around the screen.
 
-## Step 1 @fullscreen
+## {Step 1 @fullscreen}
 
-Find ``||variables:set mySprite to||`` in ``||sprites:Sprites||``. Drag it into the ``||loops:on start||``.
+Find ``||variables(sprites):set mySprite to||`` in ``||sprites:Sprites||``. Drag it into the ``||loops:on start||``.
 
 ```blocks
 let mySprite = sprites.create(img`
@@ -31,9 +29,9 @@ let mySprite = sprites.create(img`
 `, SpriteKind.Player)
 ```
 
-## Step 2 @fullscreen
+## {Step 2 @fullscreen}
 
-Click on the grey box in ``||variables:set mySprite to||`` to open the image editor. Open the Gallery, scroll to find the image of a burger, and click on the image of a burger to select that image.
+Click on the grey box in ``||variables(sprites):set mySprite to||`` to open the image editor. Open the Gallery, scroll to find the image of a burger, and click on the image of a burger to select that image.
 
 This will set the image of the ``||sprites:Sprite||`` to a burger; run the code and make sure you see it on the screen!
 
@@ -75,9 +73,9 @@ f 6 6 d d f f f f f e e e f f e f f e e e e e f f e e d b 4 6 e
 `, SpriteKind.Player)
 ```
 
-## Step 3 @fullscreen
+## {Step 3 @fullscreen}
 
-Find ``||sprites:set mySprite x to 0||`` in ``||sprites:Sprites||``. Place it after ``||variables:set mySprite to||``, and change ``||sprites:x||`` to ``||sprites:vx||``. Change the 0 to 40.
+Find ``||sprites:set mySprite x to 0||`` in ``||sprites:Sprites||``. Place it after ``||variables(sprites):set mySprite to||``, and change ``||sprites:x||`` to ``||sprites:vx||``. Change the 0 to 40.
 
 This will make the sprite move to the **right** across the screen, because the ``||sprites:x||`` position will be **increasing**.
 
@@ -120,9 +118,9 @@ f 6 6 d d f f f f f e e e f f e f f e e e e e f f e e d b 4 6 e
 mySprite.vx = 40;
 ```
 
-## Step 4 @fullscreen
+## {Step 4 @fullscreen}
 
-Find ``||sprites:set mySprite x to 0||`` in ``||sprites:Sprites||``. Place it after ``||variables:set mySprite to||``, and change ``||sprites:x||`` to ``||sprites:vy||``. Change the 0 to 60.
+Find ``||sprites:set mySprite x to 0||`` in ``||sprites:Sprites||``. Place it after ``||variables(sprites):set mySprite to||``, and change ``||sprites:x||`` to ``||sprites:vy||``. Change the 0 to 60.
 
 This will make the sprite move **downwards** across the screen, because the ``||sprites:y||`` position will be **increasing**.
 
@@ -166,9 +164,9 @@ mySprite.vx = 40
 mySprite.vy = 60
 ```
 
-## Step 5 @fullscreen
+## {Step 5 @fullscreen}
 
-Find ``||sprites:set mySprite bounce on wall||`` in ``||sprites:Sprites||``. Place it after ``||variables:set mySprite to||``.
+Find ``||sprites:set mySprite bounce on wall||`` in ``||sprites:Sprites||``. Place it after ``||variables(sprites):set mySprite to||``.
 
 This will make it so that when the burger its a wall, it will 'bounce' off the wall, changing the ``||sprites:vx||`` or ``||sprites:vy||``
 
@@ -213,7 +211,7 @@ mySprite.vy = 60
 mySprite.setBounceOnWall(true)
 ```
 
-## Complete
+## {Complete}
 
 Congratulations, your burger will now bounce off the walls! This could be used to help implement a variety of games.
 

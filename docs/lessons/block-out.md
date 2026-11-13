@@ -39,7 +39,7 @@ Next, drag a ``||sprites:set mySprite position to x y||`` from ``||sprites:Sprit
 
 ![Player moving on the screen](/static/lessons/block-out/moving-player.gif)
 
-Next, we will make the projectile that will bounce against the paddle, walls, and blocks. Go into ``||sprites:Sprites||`` and grab a ``||sprites:set projectile to projectile from mySprite||`` and then place it in the ``||lopps:on start||``. Click on the image editor and draw a ball. Change ``mySprite`` to ``paddle`` and set **vx** to **50** and **vy** to **-55**. Go to ``||sprites:Sprites||``, grab a ``||sprites:set mySprite stay in screen||``, and drag it into the workspace. Then set the ``mySprite`` to ``projectile`` and then change the ``stay in screen`` to ``destroy on wall``. Keep the toggle set to **OFF**. Go to ``||sprites:Sprites||``, grab a ``||sprites:set projectile bounce on wall on||``, and drag it into ``||loops:on start||``.
+Next, we will make the projectile that will bounce against the paddle, walls, and blocks. Go into ``||sprites:Sprites||`` and grab a ``||sprites:set projectile to projectile from mySprite||`` and then place it in the ``||loops:on start||``. Click on the image editor and draw a ball. Change ``mySprite`` to ``paddle`` and set **vx** to **50** and **vy** to **-55**. Go to ``||sprites:Sprites||``, grab a ``||sprites:set mySprite stay in screen||``, and drag it into the workspace. Then set the ``mySprite`` to ``projectile`` and then change the ``stay in screen`` to ``destroy on wall``. Keep the toggle set to **OFF**. Go to ``||sprites:Sprites||``, grab a ``||sprites:set projectile bounce on wall on||``, and drag it into ``||loops:on start||``.
 
 ```blocks
 let paddle = sprites.create(img`
@@ -271,7 +271,7 @@ From ``||logic:Logic||`` grab a ``||logic: if then else||`` block and place it i
 
 From ``||logic:Logic||`` grab a ``||logic:0 < 0||`` block and place it in the first field of the ``||logic:_ or _||`` block. Next, in the first field of the ``||logic:0 < 0||`` block, place a ``||sprites:mySprite x||`` from ``||sprites:Sprites||``. Drag ``sprite`` from the function block and place it on the ``mySprite``. In the second field, place a ``||math:0 - 0||`` block from ``||math:Math||``. Set the second field to **8**. In the first part of the ``||math:0-0||`` block, place a ``||sprites:mySprite x||``. Drag an ``otherSprite`` from the function and place it in the ``mySprite``.
 
-Duplicate the entire block (the one that started as jsut the ``||logic:0 < 0||``) and place it in the second field of the ``||logic:or||`` conditional statement. Change the ``<`` sign to a ``>`` sign. Then, in the math block, change the ``-`` sign to a ``+`` sign. In the ``||logic:if||`` statement then place a ``||variables:set var to||`` from ``||variables:Variables||``. Click the dropdown and select ``direction``. Then type in **1**. In the ``||logic:else||`` statement place a  ``||variables:set var to||`` from ``||variables:Variables||``. Click the dropdown and select ``direction``. Then type in **0**.
+Duplicate the entire block (the one that started as just the ``||logic:0 < 0||``) and place it in the second field of the ``||logic:or||`` conditional statement. Change the ``<`` sign to a ``>`` sign. Then, in the math block, change the ``-`` sign to a ``+`` sign. In the ``||logic:if||`` statement then place a ``||variables:set var to||`` from ``||variables:Variables||``. Click the dropdown and select ``direction``. Then type in **1**. In the ``||logic:else||`` statement place a  ``||variables:set var to||`` from ``||variables:Variables||``. Click the dropdown and select ``direction``. Then type in **0**.
 
 Congrats, we have now made a function!
 
@@ -328,19 +328,21 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.block, function (sprite, oth
 
 ## Part Seven: Ending the Game
 
-From ``||loops:Loops||`` drag out a ``||loops:forever block||`` and place it anywhere in the workspace. From ``||logic:Logic||`` drag out an ``||logic:if then||`` block and place it in the ``||loops:forever||`` loop. From ``||logic:Logic||`` drag out a ``||logic:0 > 0||`` block and place it in the ``||logic:if||`` statement. Set the second field to **119**. Then from ``||sprites:Sprites||`` drag out a ``||sprites:mySprite x||`` and place it in the first field. Set the ``mySprite`` to ``projectile`` and the ``x`` to ``bottom``. Inside the ``||logic:if||`` statement drag in a ``||game:game over lose||`` block from ``||game:Game||``. Click the **(+)** symbol and set the effect to ``slash``.
+From ``||loops:Loops||`` drag out a ``||loops:forever block||`` and place it anywhere in the workspace. From ``||logic:Logic||`` drag out an ``||logic:if then||`` block and place it in the ``||loops:forever||`` loop. From ``||logic:Logic||`` drag out a ``||logic:0 > 0||`` block and place it in the ``||logic:if||`` statement. Set the second field to **119**. Then from ``||sprites:Sprites||`` drag out a ``||sprites:mySprite x||`` and place it in the first field. Set the ``mySprite`` to ``projectile`` and the ``x`` to ``bottom``. Inside the ``|logic:if||`` statement drag in a ``||game:use effect||`` and set the toggle to `LOSE` Then, click the **(+)** symbol to set the effect to ``slash``. Get a ``||game:game over win||`` block from ``||game:Game||``. Set the toggle to `LOSE`.
 
-Then from ``||logic:Logic||``, drag out an ``||logic:if then||`` block and place it in the ``||loops:forever||`` loop. From ``||logic:Logic||`` drag out a ``||logic:0 = 0||`` block and place it in the ``||logic:if||`` statement. Set the second field to **30**. For the first field, drag in ``||info:score||`` from ``||info:Info||``. Inside the ``|logic:if||`` statement drag in a ``||game:game over lose||`` block from ``||game:Game||``. Switch the toggle to **WIN** and then click the **(+)** symbol set the effect to ``brighten``.
+Then, from ``||logic:Logic||``, drag out an ``||logic:if then||`` block and place it in the ``||loops:forever||`` loop. From ``||logic:Logic||`` drag out a ``||logic:0 = 0||`` block and place it in the ``||logic:if||`` statement. Set the second field to **30**. For the first field, drag in ``||info:score||`` from ``||info:Info||``. Inside the ``|logic:if||`` statement, drag in a ``||game:use effect||`` and click the **(+)** symbol to set the effect to ``confetti``. Get a ``||game:game over||`` block from ``||game:Game||``.
 
 ```blocks
 info.setScore(1)
 let projectile: Sprite = null
 forever(function () {
     if (projectile.bottom > 119) {
-        game.over(false, effects.slash)
+        game.setGameOverEffect(false, effects.slash)
+        game.gameOver(false)
     }
     if (info.score() == 2) {
-        game.over(true, effects.confetti)
+        game.setGameOverEffect(true, effects.confetti)
+        game.gameOver(true)
     }
 })
 ```
@@ -507,10 +509,12 @@ scene.setBackgroundColor(13)
 direction = 1
 forever(function () {
     if (projectile.bottom > 119) {
-        game.over(false, effects.slash)
+        game.setGameOverEffect(false, effects.slash)
+        game.gameOver(false)
     }
     if (info.score() == 30) {
-        game.over(true, effects.bubbles)
+        game.setGameOverEffect(true, effects.bubbles)
+        game.gameOver(true)
     }
 })
 ```

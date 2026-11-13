@@ -1,0 +1,36 @@
+name: Validate Copilot Configuration
+permissions:
+  contents: read
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, master]
+    paths:
+      - '.github/copilot-instructions.md'
+      - '.github/README.md'
+
+jobs:
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    name: Validate GitHub Copilot Configuration
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+          
+      - name: Validate configuration files exist
+        run: |
+          echo "🔍 Validating Copilot configuration files..."
+          
+          if [ ! -f ".github/copilot-instructions.md" ]; then
+            echo "❌ Missing .github/copilot-instructions.md"
+            exit 1
+          fi
+          
+          if [ ! -f ".github/README.md" ]; then
+            echo "❌ Missing .github/README.md"
+            exit 1
+          fi
+          
+          echo "✅ All configuration files found"
+          echo "✅ Copilot configuration validation completed!"

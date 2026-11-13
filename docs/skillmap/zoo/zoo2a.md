@@ -1,109 +1,111 @@
 # First Exhibit: By Sea
 
-## Step 1
+## 1. Welcome
 
 **🐙 Welcome to the aquarium! 🐙**  
 We're so excited to have you designing this exhibit.
 
 ---
 
-► To start, go to the ``||sprites:Sprites||`` category and drag 
-``||variables:set [mySprite] to sprite [ ] of kind [Player]||`` 
-into the ``||loops:on start||`` container. 
+- :paper plane:  To start, go to the ``||sprites:Sprites||`` category and drag
+``||variables(sprites):set [mySprite] to sprite [ ] of kind [Player]||``
+into the ``||loops:on start||`` container.
 
-► Click the grey box and use the **image editor** to 
+- :paint brush:  Click the grey box and use the **image editor** to
 draw your favorite sea animal.
 
-▶ Click **> Next** when you're ready for the next step.
+- :mouse pointer:  Click **Next** when you're ready for the next step.
 
 ```blocks
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . 4 4 4 4 4 4 4 
-    . . . . . . 4 4 4 4 4 4 1 f 4 4 
-    . . . . 4 4 4 4 4 4 4 4 1 1 4 4 
-    4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4 
-    . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 . 
-    . . 4 4 4 4 4 4 4 4 4 4 4 4 . . 
-    . 4 . . . . . . 4 4 4 4 . . . . 
-    4 . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . 4 4 4 4 4 4 4
+    . . . . . . 4 4 4 4 4 4 1 f 4 4
+    . . . . 4 4 4 4 4 4 4 4 1 1 4 4
+    4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4
+    . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 .
+    . . 4 4 4 4 4 4 4 4 4 4 4 4 . .
+    . 4 . . . . . . 4 4 4 4 . . . .
+    4 . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
     `, SpriteKind.Player)
 ```
 
-## Step 2 
+## 2. Move It
 
-**🐡 Just keep swimming! 🐡**
+**Just keep swimming!**
 
 ---
 
-▶ In ``||sprites:Sprites||``, find
-``||sprites:set [mySprite] [x] to [0]||`` 
-and drag it into the **end** of the ``||loops:on start||`` container. 
+- :paper plane:  In ``||sprites:Sprites||``, find  
+``||sprites:set [mySprite] [x] to [0]||``  
+and drag it into the **end** of the ``||loops:on start||`` container.
 
-▶ Click **x** then choose ** vx (velocity x)** from the dropdown menu.
+- :mouse pointer:  Click **x** then choose ** vx (velocity x)** from the dropdown menu.
 
-▶ Try changing the **0** in the textbox to something else 
-*(either positive or negative)*.   
+- :mouse pointer:  Try changing the **0** in the textbox to something else
+*(either positive or negative)*.
+
 You should see your fishy friend start to move on the game screen.
 
 ```blocks
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . 4 4 4 4 4 4 4 
-    . . . . . . 4 4 4 4 4 4 1 f 4 4 
-    . . . . 4 4 4 4 4 4 4 4 1 1 4 4 
-    4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4 
-    . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 . 
-    . . 4 4 4 4 4 4 4 4 4 4 4 4 . . 
-    . 4 . . . . . . 4 4 4 4 . . . . 
-    4 . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . 4 4 4 4 4 4 4
+    . . . . . . 4 4 4 4 4 4 1 f 4 4
+    . . . . 4 4 4 4 4 4 4 4 1 1 4 4
+    4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4
+    . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 .
+    . . 4 4 4 4 4 4 4 4 4 4 4 4 . .
+    . 4 . . . . . . 4 4 4 4 . . . .
+    4 . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
     `, SpriteKind.Player)
     //@highlight
 mySprite.vx = 50
 ```
 
-## Step 3
+## 3. Bounce
 
 **Let's teach our fishy friend to do a flip!**
 
 ---
 
-► Open ``||sprites:Sprites||``, then snap ``||sprites:set [mySprite] bounce on wall <ON>||`` 
+- :paper plane:  Open ``||sprites:Sprites||``, then snap  
+``||sprites:set [mySprite] bounce on wall <ON>||``  
 to the end of the program and check out your exhibit on the game screen!
 
 ```blocks
 
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . 4 4 4 4 4 4 4 
-    . . . . . . 4 4 4 4 4 4 1 f 4 4 
-    . . . . 4 4 4 4 4 4 4 4 1 1 4 4 
-    4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4 
-    . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 . 
-    . . 4 4 4 4 4 4 4 4 4 4 4 4 . . 
-    . 4 . . . . . . 4 4 4 4 . . . . 
-    4 . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . 4 4 4 4 4 4 4
+    . . . . . . 4 4 4 4 4 4 1 f 4 4
+    . . . . 4 4 4 4 4 4 4 4 1 1 4 4
+    4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4
+    . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 .
+    . . 4 4 4 4 4 4 4 4 4 4 4 4 . .
+    . 4 . . . . . . 4 4 4 4 . . . .
+    4 . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
     `, SpriteKind.Player)
 mySprite.vx = 50
 //@highlight
@@ -111,118 +113,127 @@ mySprite.setBounceOnWall(true)
 ```
 
 
-## Step 4
+## 4. Random
 
 **Let's make the aquarium more exciting with some** **_randomness_**.
 
 ---
 
-► Grab a **new** ``||sprites:set [mySprite] [x] to [0]||`` block 
-and drag it to the end of the ``||loops:on start||`` container. 
+- :paper plane:  Grab a **new**  
+``||sprites:set [mySprite] [x] to [0]||``  
+block and drag it to the end of the ``||loops:on start||`` container.
 
-► Replace **x** with **y** using the dropdown menu.  
+- :mouse pointer:  Replace **x** with **y** using the dropdown menu.
+
 This will change the position of the fish in the up/down direction.
 
 
 ```blocks
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . 4 4 4 4 4 4 4 
-    . . . . . . 4 4 4 4 4 4 1 f 4 4 
-    . . . . 4 4 4 4 4 4 4 4 1 1 4 4 
-    4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4 
-    . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 . 
-    . . 4 4 4 4 4 4 4 4 4 4 4 4 . . 
-    . 4 . . . . . . 4 4 4 4 . . . . 
-    4 . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)    
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . 4 4 4 4 4 4 4
+    . . . . . . 4 4 4 4 4 4 1 f 4 4
+    . . . . 4 4 4 4 4 4 4 4 1 1 4 4
+    4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4
+    . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 .
+    . . 4 4 4 4 4 4 4 4 4 4 4 4 . .
+    . 4 . . . . . . 4 4 4 4 . . . .
+    4 . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    `, SpriteKind.Player)
 mySprite.vx = 50
 mySprite.setBounceOnWall(true)
 //@highlight
 mySprite.y = 0
 ```
 
-## Step 5
+## 5. Replace Values
 
-► From the ``||math:Math||`` category, grab a 
-``||math:pick random [0] to [10]||`` value block and 
-use it to replace the **0** next to ``||sprites:y||``. 
+- :calculator:  From the ``||math:Math||`` category, grab a  
+``||math:pick random [0] to [10]||``   
+value block and
+use it to replace the **0** next to ``||sprites:y||``.
 
-► Try replacing **0** and **10** with larger numbers
+- :mouse pointer:  Try replacing **0** and **10** with larger numbers
 to see how they affect your new friend!
 
----
 
-**Hint:** The screen height only goes from **0** to **120** so numbers outside
-that range will hide your aquatic animal.
+_💡 The screen height only goes from **0** to **120** so numbers outside
+that range will hide your aquatic animal._
 
 
 ```blocks
 let mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . 4 4 4 4 4 4 4 
-    . . . . . . 4 4 4 4 4 4 1 f 4 4 
-    . . . . 4 4 4 4 4 4 4 4 1 1 4 4 
-    4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4 
-    . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 . 
-    . . 4 4 4 4 4 4 4 4 4 4 4 4 . . 
-    . 4 . . . . . . 4 4 4 4 . . . . 
-    4 . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)    
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . 4 4 4 4 4 4 4
+    . . . . . . 4 4 4 4 4 4 1 f 4 4
+    . . . . 4 4 4 4 4 4 4 4 1 1 4 4
+    4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4
+    . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 .
+    . . 4 4 4 4 4 4 4 4 4 4 4 4 . .
+    . 4 . . . . . . 4 4 4 4 . . . .
+    4 . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . .
+    `, SpriteKind.Player)
 mySprite.vx = 50
 mySprite.setBounceOnWall(true)
 //@highlight
 mySprite.y = randint(10, 110)
 ```
 
+## 6. Try It
 
-## Step 6
-**This is awesome...**but it's looking a little lonely in that aquarium.  
-Let's give your sea critter a few friends!
+**Check the Game Window**  
+
+Watch your friend swim!
+
+
+
+## 7. Add More
+
+**This is awesome...**but it's looking a little lonely in that aquarium. Let's give your sea critter a few friends!
 
 ---
 
-► In ``||loops:Loops||``, find the 
-``||loops:repeat [4] times||`` loop container and snap it into the **top** of the 
-**on start** container.
+- :redo:  In ``||loops:Loops||``, find the  
+``||loops:repeat [4] times||``  
+loop container and snap it into the **top** of the  
+``||loops:on start||`` container.
 
-► Grab the first block of code beneath the new loop and use it to drag the whole 
-chunk of code up into the empty **repeat** container. 
+- :mouse pointer:  Grab the first block of code beneath the new loop and use it to drag the whole chunk of code up into the empty **repeat** container.
 
 ```blocks
 //@highlight
 for (let index = 0; index < 4; index++) {
     let mySprite = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . 4 4 4 4 4 4 4 
-        . . . . . . 4 4 4 4 4 4 1 f 4 4 
-        . . . . 4 4 4 4 4 4 4 4 1 1 4 4 
-        4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4 
-        . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 . 
-        . . 4 4 4 4 4 4 4 4 4 4 4 4 . . 
-        . 4 . . . . . . 4 4 4 4 . . . . 
-        4 . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . 4 4 4 4 4 4 4
+        . . . . . . 4 4 4 4 4 4 1 f 4 4
+        . . . . 4 4 4 4 4 4 4 4 1 1 4 4
+        4 . . 4 4 4 4 4 4 4 4 4 4 4 4 4
+        . 4 4 4 4 4 4 4 4 4 4 4 4 4 4 .
+        . . 4 4 4 4 4 4 4 4 4 4 4 4 . .
+        . 4 . . . . . . 4 4 4 4 . . . .
+        4 . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . .
         `, SpriteKind.Player)
     mySprite.vx = 50
     mySprite.setBounceOnWall(true)
@@ -230,27 +241,28 @@ for (let index = 0; index < 4; index++) {
 }
 ```
 
-## Step 7 @showdialog
+## 8. What's Up? @showdialog
 
 **🌟 Great work 🌟**
 
-Those fish look as happy as clams. 
+Those fish look as happy as clams.
 
-Now it's feeding time, so let's 
+Now it's feeding time, so let's
 get over to — **OH NO! What's this?**
 
 
-## Step 8 @showdialog
+## 9. WooWoo @showdialog
 
 ![A rotating red siren](/static/skillmap/zoo/siren.gif)
 
 **An alarm?**
 
 What's going on? Hold on, we're getting a report from the penguin department — the
-penguins did *what*? 
+penguins did *what*?
 
-## Step 9
-**🚨 You better click "Finish" and get over there!🚨**
+## Finale
+**You better click "Done" and get over there!**  
+🚨 🚨 
 
 
 

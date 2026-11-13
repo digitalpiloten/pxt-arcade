@@ -1,5 +1,7 @@
-// there's no UF2 bootloader for 52833 yet, so we specify example configuration here
+// there's no UF2 bootloader for 52833 yet, so we specify configuration here
 namespace config {
+    export const SETTINGS_SIZE = (8*1024)
+
     export const PIN_BTNMX_LATCH = DAL.P0_9
     export const PIN_BTNMX_CLOCK = DAL.P1_0
     export const PIN_BTNMX_DATA = DAL.P0_1
@@ -27,10 +29,22 @@ namespace config {
 
     export const DISPLAY_WIDTH = 160
     export const DISPLAY_HEIGHT = 128
+    export const DISPLAY_DELAY = 300
+    export const CLOCK_SPEED = 32
 
     export const DISPLAY_TYPE = 4242 // smart display
 
     export const DISPLAY_CFG0 = 0x00000080
     export const DISPLAY_CFG1 = 0x00000603
     export const DISPLAY_CFG2 = 8
+
+    // mappng for big edge connector pins,
+    export const PIN_P0 = DAL.P0_2
+    export const PIN_P1 = DAL.P0_3 
+    export const PIN_P2 = DAL.P0_4
 }
+
+
+
+
+

@@ -6,16 +6,16 @@ There are enemies everywhere!
 
 ![Beware](/static/skillmap/shark/shark1a.gif)
 
-In this activity, we'll add enemies that pop out of nowhere and follow your shark. 
+In this activity, we'll add enemies that pop out of nowhere and follow your shark.
 
 
 ## step 2
 
-**🕹️ Play it again 🕹️**  
+**🕹️ Play it again 🕹️**
 
 ---
 
-Play with your project in the game window to remember where you left off.  
+Play with your project in the game window to remember where you left off.
 Do you remember which chunk of code connects to each action on the screen?
 
 
@@ -23,7 +23,7 @@ Do you remember which chunk of code connects to each action on the screen?
 
 ## step 3
 
-**🕓 Timing is everything 🕗**  
+**🕓 Timing is everything 🕗**
 
 Let's add a container for code that will run every 2.5 seconds.
 
@@ -41,13 +41,13 @@ game.onUpdateInterval(2500, function () {
 
 ## Step 4
 
-**🦹‍♂️ Make some enemies 🦹‍♂️**  
+**🦹‍♂️ Make some enemies 🦹‍♂️**
 
 ---
 
-► From ``||sprites:Sprites||``, drag ``||variables: set [mySprite2] to sprite [ ] of kind [Player]||`` into the empty ``||game:on game update every [2500] ms||`` container.
+► From ``||sprites:Sprites||``, drag ``||variables(sprites): set [mySprite2] to sprite [ ] of kind [Player]||`` into the empty ``||game:on game update every [2500] ms||`` container.
 
-► To rename this to **myEnemy**, click **mySprite2** to open a dropdown menu and choose ``||variables:Rename variable...||``. Enter **myEnemy** and click **Ok**. 
+► To rename this to **myEnemy**, click **mySprite2** to open a dropdown menu and choose ``||variables(noclick):Rename variable...||``. Enter **myEnemy** and click **Ok**.
 
 ► Change the kind from **Player** to **Enemy**.
 
@@ -55,15 +55,15 @@ game.onUpdateInterval(2500, function () {
 game.onUpdateInterval(2500, function () {
 // @highlight
     let myEnemy = sprites.create(img`
-        . . . 
-        . . . 
+        . . .
+        . . .
         . . . `, SpriteKind.Enemy)
 })
 ```
 
 ## Step 5
 
-► Click the grey box inside the ``||variables: set [myEnemy] to sprite [ ] of kind [Enemy]||`` block and toggle to **My Assets** to choose the **enemy** submarine, then click **Done**.
+► Click the grey box inside the ``||variables(sprites): set [myEnemy] to sprite [ ] of kind [Enemy]||`` block and toggle to **My Assets** to choose the **enemy** submarine, then click **Done**.
 
 ```blocks
 game.onUpdateInterval(2500, function () {
@@ -77,15 +77,15 @@ game.onUpdateInterval(2500, function () {
 ## Step 6
 
 
-** Location, Location, Location! **  
+** Location, Location, Location! **
 
-It's time to tell the new enemy sprites where to spawn. 
+It's time to tell the new enemy sprites where to spawn.
 
 ---
 
-► From ``||sprites:Sprites||``, drag a ``||sprites:set [mySprite] position to x [0] y [0]||`` block into **the end** of the ``||game:on game update every [2500] ms||``  container. 
+► From ``||sprites:Sprites||``, drag a ``||sprites:set [mySprite] position to x [0] y [0]||`` block into **the end** of the ``||game:on game update every [2500] ms||``  container.
 
-► Change ``||variables:mySprite||`` to ``||variables:myEnemy||``.
+► Change ``||variables(noclick):mySprite||`` to ``||variables(noclick):myEnemy||``.
 
 ```blocks
 game.onUpdateInterval(2500, function () {
@@ -97,8 +97,8 @@ game.onUpdateInterval(2500, function () {
 
 ## Step 7
 
-**Let's start all of the enemies at the furthest edge of the screen.**  
-(This means you'll need to set the **x** value to the full width of the screen.) 
+**Let's start all of the enemies at the furthest edge of the screen.**
+(This means you'll need to set the **x** value to the full width of the screen.)
 
 ---
 
@@ -118,7 +118,7 @@ game.onUpdateInterval(2500, function () {
 
 ## Step 8
 
-**🎮 Take a look at the game window to see how everything works 🎮**  
+**🎮 Take a look at the game window to see how everything works 🎮**
 
 You should have a shark that moves around with the arrow keys and enemies that spawn in the upper-right corner of the screen.
 
@@ -126,7 +126,7 @@ You should have a shark that moves around with the arrow keys and enemies that s
 
 ## Step 10
 
-**🔀 Shake up the enemy 🔀**  
+**🔀 Shake up the enemy 🔀**
 Let's start the submarine at a random height to keep things interesting.
 
 ---
@@ -149,11 +149,11 @@ let mySprite: Sprite = null
 
 ## Step 11
 
-**💥 Enemies on the move 💥**   
+**💥 Enemies on the move 💥**
 
 ---
 
-► Send your enemies after the shark by adding the ``||sprites:set [myEnemy] follow [mySprite]||`` block to **the end** of the ``||game:on game update every [2500] ms||`` container where ``||variables:myEnemy||`` is made.
+► Send your enemies after the shark by adding the ``||sprites:set [myEnemy] follow [mySprite]||`` block to **the end** of the ``||game:on game update every [2500] ms||`` container where ``||variables(noclick):myEnemy||`` is made.
 
 ► Click the plus sign (**+**) to the right of the ``||sprites:set [myEnemy] follow [mySprite]||`` block and set the enemy speed to **30** so it doesn't attack too fast.
 
@@ -169,15 +169,15 @@ let mySprite: Sprite = null
 
 
 
-## Finale 
+## Finale
 
-**There you have it!** 
+**There you have it!**
 
 ---
 
-Enemies will now pop up and try to attack your shark every couple of seconds.  
+Enemies will now pop up and try to attack your shark every couple of seconds.
 
-Click **Finish** to head back out to the main map to find out how the enemies can create damage!
+Click **Done** to head back out to the main map to find out how the enemies can create damage!
 
 
 

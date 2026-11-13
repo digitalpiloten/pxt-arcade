@@ -1,12 +1,12 @@
 # Create a Hero
 
-## Introduction @unplugged
+## {Introduction @unplugged}
 
 Let's make a game! First, we'll create a main character that shoots some projectiles. Maybe that's a duck that shoots bubbles, or a monkey throwing bananas, or a cat that spits hairballs--it's up to you!
 
 ![Duck bubbles](/static/recipes/shark-splash/01-character.gif)
 
-## Set the scene
+## {Set the scene}
 
 From ``||scene:Scene||``, drag the ``||scene:set background color||`` block into the ``||loops:on start||`` block on your workspace and select a background color for your game.
 
@@ -15,9 +15,9 @@ From ``||scene:Scene||``, drag the ``||scene:set background color||`` block into
 scene.setBackgroundColor(8)
 ```
 
-## Draw your hero
+## {Draw your hero}
 
-From ``||sprites:Sprites||``, drag the ``||variables:set mySprite to||`` block into ``||loops:on start|``. Click on the grey box in ``||variables:set mySprite to||`` and then select **Gallery** in the image editor. Choose your hero!
+From ``||sprites:Sprites||``, drag the ``||variables(sprites):set mySprite to||`` block into ``||loops:on start|``. Click on the grey box in ``||variables(sprites):set mySprite to||`` and then select **Gallery** in the image editor. Choose your hero!
 
 ```blocks
 scene.setBackgroundColor(8)
@@ -42,9 +42,9 @@ let mySprite = sprites.create(img`
 `, SpriteKind.Player)
 ```
 
-## Control your hero
+## {Control your hero}
 
-From ``||controller:Controller||``, drag the ``||controller:move mySprite with buttons||`` block **after** ``||variables:set mySprite to||``. This will allow you to move your sprite around the screen. Try it out in the simulator using the arrow keys on your keyboard or by clicking the joystick.
+From ``||controller:Controller||``, drag the ``||controller:move mySprite with buttons||`` block **after** ``||variables(sprites):set mySprite to||``. This will allow you to move your sprite around the screen. Try it out in the simulator using the arrow keys on your keyboard or by clicking the joystick.
 
 ```blocks
 scene.setBackgroundColor(8)
@@ -70,7 +70,7 @@ let mySprite = sprites.create(img`
 controller.moveSprite(mySprite)
 ```
 
-## Spawn projectiles
+## {Spawn projectiles}
 
 Now lets have our hero shoot some projectiles! Find ``||controller:on A button pressed||`` in ``||controller:Controller||`` and drag it into the workspace.
 
@@ -80,9 +80,9 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 ```
 
-## Draw your projectile
+## {Draw your projectile}
 
-From ``||sprites:Sprites||`` drag ``||variables:projectile from mySprite||`` into the ``||controller:on A button pressed||``. Set the ``||sprites:vy||`` value to `0`, then click on the grey square to open the image editor and draw your projectile. Try shooting the projectile in the simulator using your keyboard or click the **A** button.
+From ``||sprites:Sprites||`` drag ``||variables(sprites):projectile from mySprite||`` into the ``||controller:on A button pressed||``. Set the ``||sprites:vy||`` value to `0`, then click on the grey square to open the image editor and draw your projectile. Try shooting the projectile in the simulator using your keyboard or click the **A** button.
 
 ```blocks
 let mySprite: Sprite = null
@@ -105,7 +105,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 ```
 
-## Conclusion @unplugged
+## {Conclusion @unplugged}
 
 Now that you have a hero character, let's customize your game. Maybe you want to add some villains who are attacking your character, or maybe you want to develop the scene of your game--it's up to you!
 

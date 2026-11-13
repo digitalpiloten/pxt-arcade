@@ -1,7 +1,7 @@
-# Jungle Monkey Platformer
-* name: Jungle Monkey Platformer
-* description: Create a wild sidescroller called Jungle Monkey Jump! In these activities, you'll code your monkey, add magic platforms, toss explosives, and collect valuables throughout a pair of customizable level maps.
-* infoUrl: skillmap/educator-info/int-map-info
+# Jungle Jump Platformer
+* name: Jungle Jump Platformer
+* description: Create a wild sidescroller called Jungle Jump! In these activities, you'll code your monkey, add magic platforms, toss explosives, and collect valuables throughout a pair of customizable level maps.
+* infoUrl: skillmap/educator-info/jungle-map-info
 * bannerUrl: /static/skillmap/jungle/jungle6.gif
 * backgroundurl: /static/skillmap/backgrounds/jungle-bg.png
 * primarycolor: #2EA9B0
@@ -13,14 +13,14 @@
 
 
 ## Build a Platformer Game!
-* name: Jungle Monkey Platformer
+* name: Jungle Jump Platformer
 * layout: manual
 
 ### jungle1
 * allowcodecarryover: false
-* name: Jungle Monkey Jump
+* name: Moving Monkey
 * type: tutorial
-* description: Make your monkey jump and move around!
+* description: Make your player jump and move around!
 * url: /skillmap/jungle/jungle1
 * imageUrl: /static/skillmap/jungle/jungle1.gif
 * tags: easy
@@ -104,10 +104,16 @@
 * name: Congrats!
 * kind: completion
 * type: certificate
-* imageUrl: /static/skillmap/certificates/platformer-cert.png
-* url: /static/skillmap/certificates/learn-to-make-a-platformer.pdf
+* imageUrl: /static/skillmap/certificates/jungle-cert.png
+* url: /static/skillmap/certificates/jungle-cert.pdf
 * position: 4 1
-
-
-
-
+* actions:
+    * map: [Try Space Explorer](/skillmap/space)
+    * editor: [Mod Your Project](/)
+* rewards:
+        * certificate:
+            * url: /static/skillmap/certificates/jungle-cert.pdf
+            * preview: /static/skillmap/certificates/jungle-cert.png
+        * completion-badge:
+            * image: /static/badges/badge-jungle.png
+            * name: Jungle Jump
